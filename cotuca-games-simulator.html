@@ -4,8 +4,10 @@
         <title>Cotuca Games | Cotuca Simulator</title>
         <link rel="stylesheet" type="text/css" href="estilo-geral.css">
     </head>
+
+    <script src="CotucaSimulator.js"></script>
     
-    <body onload="iniciar();">
+    <body onload="tickGlobal();">
         <nav id="menu">
             <ul>
                 <li><a class="logo" href="cotuca-games-home.html"><img class="logo" src="logo-site.png"></a></li>
@@ -21,13 +23,24 @@
         <hr class="separacao">
 
         <div id="bordaJogo">
-            <p id="Nivel" style="position: absolute; top:50px; left: 50px;"> Nível de Estudo: </p>
+            <p id="Nivel" style="position: absolute; top:10px; left: 50px;">Nivel de Estudo: 0</p>
         
-            <button style="width: 200px; height: 50px; position: absolute; top: 100px; left: 50px;">Estudar</button>
-        
-            <div id="myProgress" style="width: 500px; position: absolute; top: 325px; left: 50px; background-color: grey">
+            <button id="btnEstudar" onclick="nEstudo++; atualizarTela();" style="width: 200px; height: 50px; position: absolute; top: 60px; left: 50px;">Estudar</button>
+            
+            <p id="Prova" style="position: absolute; top:550px; left: 50px;"></p>
+            <p id="PDf" style="position: absolute; top:570px; left: 50px;"></p>
+
+            <div id="myProgress" style="width: 500px; position: absolute; top: 610px; left: 50px; background-color: grey">
                 <div id="barra" style="height: 50px; width: 0%; background-color: green"></div>
             </div>
+            
+            <button id="btnTrabalho" onclick="cliqueTrab();" disabled="true" style="visibility: hidden; width: 80px; height: 50; position: absolute;">Trabalho <br> Surpresa</button>
+
+            <button id="btnDp" onclick="cliqueDp();" disabled="true" style="visibility: hidden; width: 40px; height: 50; position: absolute;">DP</button>
+            <button id="btnDp2" onclick="cliqueFalsaDp(2);" disabled="true" style="visibility: hidden; width: 40px; height: 50; position: absolute;">DP</button>
+            <button id="btnDp3" onclick="cliqueFalsaDp(3);" disabled="true" style="visibility: hidden; width: 40px; height: 50; position: absolute;">DP</button>
+
+            <button id="a" style="visibility: hidden;"></button>
         </div>        
     </body>
 </html>
