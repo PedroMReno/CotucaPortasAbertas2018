@@ -1,0 +1,69 @@
+#menu ul{
+		padding          : 0px;
+		margin           : 0px;
+		background-image : linear-gradient(black, #2f2f2f);
+		list-style       : none;
+		font-size        : 18pt; 
+		font-family      : Tw Cen MT;  
+		font-weight      : bold; 
+	}
+
+	#menu ul li { display : inline; }
+
+	#menu ul li a{
+		padding          : 5px 10px; 
+		display          : inline-block; 
+		color            : white;
+		text-decoration  : none; 
+	}
+
+	#menu .menu{
+		background-image : linear-gradient(#920303, #c93131);
+		list-style       : none; 
+	}
+
+	#menu .menu li a{
+		padding          : 5px 10px; 
+		padding-bottom   : 0px; 
+		display          : inline-block; 
+		color            : white;
+		text-decoration  : none;
+		border-bottom    : 5px solid #c93131;    
+	}
+
+	#menu .menu li a:hover{
+		opacity          : 0.5;
+		border-bottom    : 5px solid black;  
+	}
+
+	.logo{
+		height : 70px;
+		width  : 70px;  
+	}
+
+	.home{
+		height : 30px;
+		width  : 30px;  
+	}
+
+	#bordaJogo{
+		position : relative;
+		top      : 80px; 
+		left     : 365px;
+		border   : 1px solid grey;
+		height   : 400px;
+		width    : 600px;  
+	}
+
+	.tituloJogo{
+		font-family : Century Gothic;
+		font-size   : 20pt; 
+		position    : relative;
+		top         : 25px;
+		left        : 25px;  
+	}
+
+	.separacao{
+		position : relative;
+		top      : 35px;
+	}
