@@ -65,7 +65,7 @@ async function tickGlobal()
     	await sleep(1000);
 
     	tempoPassado += 3;
-    	tempoTotalPassado += 3;
+    	tempoTotalPassado += 5;
 
 		if(tempoPassado > 100)
 		{
@@ -78,7 +78,7 @@ async function tickGlobal()
 
     	if(tempoTotalPassado % 30 == 0 && !trabAtivo)
     	{
-    		var p = Math.floor(Math.random() * 5);
+    		var p = Math.floor(Math.random() * 3);
 
     		if(p < probTrab)
     		{
@@ -92,7 +92,7 @@ async function tickGlobal()
 
     	if(tempoTotalPassado % 40 == 0 && !dpAtivo)
     	{
-    		var p = Math.floor(Math.random() * 5);
+    		var p = Math.floor(Math.random() * 3);
 
     		if(p < probDp)
     		{
@@ -146,8 +146,8 @@ function nTrabalho()
 	bloqueado++;
 
 	trabCliques = 0;
-	var tY = 210 + Math.floor(Math.random() * 400);
-	var tX = 50 + Math.floor(Math.random() * 500);
+	var tY = Math.floor(Math.random() * 350);
+	var tX = Math.floor(Math.random() * 520);
 
 	var btnTrab = document.getElementById("btnTrabalho");
 		btnTrab.style.top = tY + "px";
@@ -175,8 +175,8 @@ function cliqueTrab()
 	}
 	else
 	{
-		var tY = 210 + Math.floor(Math.random() * 400);
-		var tX = 50 + Math.floor(Math.random() * 500);
+		var tY = Math.floor(Math.random() * 350);
+		var tX = Math.floor(Math.random() * 520);
 
 		btnTrab.style.top = tY + "px";
 		btnTrab.style.left = tX + "px";
@@ -190,8 +190,8 @@ function nDP()
 	bloqueado++;
 
 	dpCliques = 0;
-	var tY = 210 + Math.floor(Math.random() * 400);
-	var tX = 50 + Math.floor(Math.random() * 500);
+	var tY = Math.floor(Math.random() * 380);
+	var tX = Math.floor(Math.random() * 560);
 
 	var btnDP = document.getElementById("btnDp");
 		btnDP.style.top = tY + "px";
@@ -199,8 +199,8 @@ function nDP()
 		btnDP.disabled = false;
 		btnDP.style.visibility = "visible";
 
-	tY = 210 + Math.floor(Math.random() * 400);
-	tX = 50 + Math.floor(Math.random() * 500);
+	tY = Math.floor(Math.random() * 380);
+	tX = Math.floor(Math.random() * 560);
 
 	var btnDP2 = document.getElementById("btnDp2");
 		btnDP2.style.top = tY + "px";
@@ -208,8 +208,8 @@ function nDP()
 		btnDP2.disabled = false;
 		btnDP2.style.visibility = "visible";
 
-	tY = 210 + Math.floor(Math.random() * 400);
-	tX = 50 + Math.floor(Math.random() * 500);
+	tY = Math.floor(Math.random() * 380);
+	tX = Math.floor(Math.random() * 560);
 
 	var btnDP3 = document.getElementById("btnDp3");
 		btnDP3.style.top = tY + "px";
@@ -252,14 +252,14 @@ function cliqueDp()
 	}
 	else
 	{
-		var tY = 210 + Math.floor(Math.random() * 400);
-		var tX = 50 + Math.floor(Math.random() * 500);
+		var tY = Math.floor(Math.random() * 380);
+		var tX = Math.floor(Math.random() * 560);
 
 		btnDP.style.top = tY + "px";
 		btnDP.style.left = tX + "px";
 
-		tY = 210 + Math.floor(Math.random() * 400);
-		tX = 50 + Math.floor(Math.random() * 500);
+		tY = Math.floor(Math.random() * 380);
+		tX = Math.floor(Math.random() * 560);
 
 		btnDP2.style.top = tY + "px";
 		btnDP2.style.left = tX + "px";
@@ -267,8 +267,8 @@ function cliqueDp()
 		btnDP2.disabled = false;
 
 
-		tY = 210 + Math.floor(Math.random() * 400);
-		tX = 50 + Math.floor(Math.random() * 500);
+		tY = Math.floor(Math.random() * 380);
+		tX = Math.floor(Math.random() * 560);
 
 		btnDP3.style.top = tY + "px";
 		btnDP3.style.left = tX + "px";
