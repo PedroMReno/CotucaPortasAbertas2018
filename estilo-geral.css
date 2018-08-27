@@ -102,3 +102,48 @@
 	#PDf{
 		font-family : Century Gothic; 
 	}
+
+	#btnDp, #btnDp2, #btnDp3{
+		border-radius : 15px;
+		font-family   : Century Gothic;
+		border-style  : none;   
+	}
+
+	/*#telaInicio{
+		background : url(inicio.png); 
+		height     : 400px;
+		width      : 600px;
+		position   : absolute;
+		left       : 365px;
+	}*/
+
+	#telaInicio{
+		position   : relative;
+		background : url(inicio.png); 
+		top        : -322px; 
+		left       : 365px;
+		border     : 1px solid grey;
+		height     : 400px;
+		width      : 600px;  
+	}
+
+	#gameOver{
+	 	position   : relative;
+		background : url(game-over.png); 
+		top        : -725px; 
+		left       : 365px;
+		border     : 1px solid grey;
+		height     : 400px;
+		width      : 600px;  
+	}
+
+	#btnIniciar{
+		width            : 200px; 
+		height           : 50px;
+		border-radius    : 25px;
+		font-family      : Century Gothic;
+		font-size        : 18pt;
+		background-image : linear-gradient(black, #2f2f2f);
+		border-style     : none;
+		color            : white;		 
+	}
