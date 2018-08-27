@@ -3,9 +3,8 @@
 		margin           : 0px;
 		background-image : linear-gradient(black, #2f2f2f);
 		list-style       : none;
-		font-size        : 18pt; 
-		font-family      : Tw Cen MT;  
-		font-weight      : bold; 
+		font-size        : 16pt; 
+		font-family      : Tw Cen MT;
 	}
 
 	#menu ul li { display : inline; }
@@ -20,20 +19,28 @@
 	#menu .menu{
 		background-image : linear-gradient(#920303, #c93131);
 		list-style       : none; 
+		box-shadow       : 0px 5px 10px rgba(0, 0, 0, 0.4); 
 	}
 
 	#menu .menu li a{
-		padding          : 5px 10px; 
-		padding-bottom   : 0px; 
+		padding          : 5px 10px;
+		padding-bottom   : 3px; 
 		display          : inline-block; 
 		color            : white;
 		text-decoration  : none;
-		border-bottom    : 5px solid #c93131;    
+		border-bottom    : 3px solid #c93131;    
 	}
 
 	#menu .menu li a:hover{
-		opacity          : 0.5;
-		border-bottom    : 5px solid black;  
+		background-color : rgba(0, 0, 0, 0.3); 
+		border-bottom    : 3px solid white;  
+		background-size  : 30px 60px; 
+	}
+
+	#menu .menu li #abas:hover{
+		border-top       : 2px solid rgba(0, 0, 0, 0.1); 
+		border-bottom    : 3px solid white;  
+		background-size  : 30px 60px; 
 	}
 
 	.logo{
@@ -42,8 +49,8 @@
 	}
 
 	.home{
-		height : 30px;
-		width  : 30px;  
+		height : 20px;
+		width  : 20px;  
 	}
 
 	#bordaJogo{

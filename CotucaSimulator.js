@@ -25,12 +25,12 @@ function aleatorizador()
 	df = df + 5 + nEstudo + dfBonus;
 
 	var m = Math.floor((Math.random() * 5) + 1);
-	var materia = "Proxima prova: ";
+	var materia = "Próxima prova: ";
 
 	switch(m)
 	{
 		case 1:
-			materia += "Tecnica de Programacao";
+			materia += "Técnica de Programação";
 			break;
 
 		case 2:
@@ -46,7 +46,7 @@ function aleatorizador()
 			break;
 
 		case 5:
-			materia += "Gestao Empresarial";
+			materia += "Gestão Empresarial";
 			break;
 	}
 
