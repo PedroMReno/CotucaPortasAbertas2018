@@ -19,6 +19,46 @@ function sleep(ms)
 	return new Promise(resolve => setTimeout(resolve,ms));
 }
 
+function sumir(desaparecer)
+{
+	var visi = "visible";
+	if(desaparecer)
+		visi = "hidden";
+
+	var v1 = document.getElementById("btnEstudar");
+	v1.style.visibility = visi;
+	v1 = document.getElementById("btnDp");
+	v1.style.visibility = visi;
+	v1 = document.getElementById("btnDp2");
+	v1.style.visibility = visi;
+	v1 = document.getElementById("btnDp3");
+	v1.style.visibility = visi;
+	v1 = document.getElementById("btnTrabalho");
+	v1.style.visibility = visi;
+	v1 = document.getElementById("Nivel");
+	v1.style.visibility = visi;
+	v1 = document.getElementById("myProgress");
+	v1.style.visibility = visi;
+	v1 = document.getElementById("Prova");
+	v1.style.visibility = visi;
+	v1 = document.getElementById("PDf");
+	v1.style.visibility = visi;
+}
+
+function desabilitar(verdadeiro)
+{
+	var btn1 = document.getElementById("btnEstudar");
+	btn1.disabled = verdadeiro;
+	btn1 = document.getElementById("btnTrabalho");
+	btn1.disabled = verdadeiro;
+	btn1 = document.getElementById("btnDp");
+	btn1.disabled = verdadeiro;
+	btn1 = document.getElementById("btnDp2");
+	btn1.disabled = verdadeiro;
+	btn1 = document.getElementById("btnDp3");
+	btn1.disabled = verdadeiro;
+}
+
 function aleatorizador()
 {
 	dfBonus += Math.floor(df / 25)
@@ -71,7 +111,11 @@ async function tickGlobal()
 		{
 			tempoPassado = 100;
 			barra.style.width = tempoPassado + '%';
-			fimTempo();
+			if(!fimTempo())
+			{
+				perdeu();
+				break;
+			}
 		}
 
     	barra.style.width = tempoPassado + '%';
@@ -110,7 +154,7 @@ function atualizarTela()
 {
 	perderFoco();
 
-	document.getElementById("Nivel").innerHTML = "Nivel de Estudo: " + nEstudo;
+	document.getElementById("Nivel").innerHTML = "Nível de Estudo: " + nEstudo;
 }
 
 function fimTempo()
@@ -118,13 +162,15 @@ function fimTempo()
 	nEstudo = nEstudo - df;
 
 	if(nEstudo < 0)
-		alert("Voce perdeu! Ate ano que vem ;D");
+		return false;
 
 	else
 	{
 		tempoPassado = 0;
 		aleatorizador();
 		atualizarTela();
+
+		return true;
 	}
 }
 
@@ -284,4 +330,48 @@ function perderFoco()
 	btnf.style.visibility = "visible";
 	btnf.focus();
 	btnf.style.visibility = "hidden";
+}
+
+function iniciar ()
+{
+	desabilitar(true);
+	sumir(true);
+	var v1 = document.getElementById("bordaJogo");
+	v1.style.backgroundImage = "url('inicio.png')";
+	v1 = document.getElementById("btnIniciar");
+	v1.style.visibility = "visible";
+	v1.disabled = false;
+}
+
+function perdeu ()
+{
+	desabilitar(true);
+	sumir(true);
+	var v1 = document.getElementById("bordaJogo");
+	v1.style.backgroundImage = "url('game-over.png')";
+}
+
+function cliqueIniciar()
+{
+	var v1 = document.getElementById("btnEstudar");
+	v1.style.visibility = "visible";
+	v1.disabled = false;
+	v1 = document.getElementById("Nivel");
+	v1.style.visibility = "visible";
+	v1.disabled = false;
+	v1 = document.getElementById("myProgress");
+	v1.style.visibility = "visible";
+	v1.disabled = false;
+	v1 = document.getElementById("Prova");
+	v1.style.visibility = "visible";
+	v1.disabled = false;
+	v1 = document.getElementById("PDf");
+	v1.style.visibility = "visible";
+	v1.disabled = false;
+	var v1 = document.getElementById("bordaJogo");
+	v1.style.backgroundImage = null;
+	v1 = document.getElementById("btnIniciar");
+	v1.style.visibility = "hidden";
+	v1.disabled = true;
+	tickGlobal();
 }
