@@ -70,9 +70,42 @@
 		left        : 25px;  
 	}
 
+	.tituloDescricao{
+		font-family : Century Gothic;
+		font-size   : 20pt; 
+		position    : relative;
+		top         : 150px;
+		left        : 25px;  
+	}
+
 	.separacao{
 		position : relative;
-		top      : 35px;
+		color    : grey;
+	}
+
+	#descricao{
+		width        : 95%;
+		font-family  : Century Gothic;
+		font-size    : 16pt;
+		position     : relative;
+		top          : 175px;
+		padding-left : 25px;
+		text-align   : justify;       
+	}
+
+	.footer{
+    	position         : relative;
+    	padding          : 0px;
+    	margin           : 0px;  
+    	top              : 500px;
+    	width            : 100%;
+    	padding-top      : 25px;  
+    	height           : 80px;
+    	background-color : #2b2c33; 
+    	text-align       : center;
+    	font-family      : Century Gothic;
+    	font-size        : 16px; 
+    	color            : #FFFFFF; 
 	}
 
 	#btnEstudar{
