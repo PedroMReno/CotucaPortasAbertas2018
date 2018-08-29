@@ -27,14 +27,6 @@ function sumir(desaparecer)
 
 	var v1 = document.getElementById("btnEstudar");
 	v1.style.visibility = visi;
-	v1 = document.getElementById("btnDp");
-	v1.style.visibility = visi;
-	v1 = document.getElementById("btnDp2");
-	v1.style.visibility = visi;
-	v1 = document.getElementById("btnDp3");
-	v1.style.visibility = visi;
-	v1 = document.getElementById("btnTrabalho");
-	v1.style.visibility = visi;
 	v1 = document.getElementById("Nivel");
 	v1.style.visibility = visi;
 	v1 = document.getElementById("myProgress");
@@ -43,20 +35,36 @@ function sumir(desaparecer)
 	v1.style.visibility = visi;
 	v1 = document.getElementById("PDf");
 	v1.style.visibility = visi;
+
+	if(tempoTotalPassado > 0)   //O jogo já começou?
+	{
+		v1 = document.getElementById("btnDp");
+		v1.style.visibility = visi;
+		v1 = document.getElementById("btnDp2");
+		v1.style.visibility = visi;
+		v1 = document.getElementById("btnDp3");
+		v1.style.visibility = visi;
+		v1 = document.getElementById("btnTrabalho");
+		v1.style.visibility = visi;
+	}
 }
 
 function desabilitar(verdadeiro)
 {
 	var btn1 = document.getElementById("btnEstudar");
 	btn1.disabled = verdadeiro;
-	btn1 = document.getElementById("btnTrabalho");
-	btn1.disabled = verdadeiro;
-	btn1 = document.getElementById("btnDp");
-	btn1.disabled = verdadeiro;
-	btn1 = document.getElementById("btnDp2");
-	btn1.disabled = verdadeiro;
-	btn1 = document.getElementById("btnDp3");
-	btn1.disabled = verdadeiro;
+
+	if(tempoTotalPassado > 0)   //O jogo já começou?
+	{
+		btn1 = document.getElementById("btnTrabalho");
+		btn1.disabled = verdadeiro;
+		btn1 = document.getElementById("btnDp");
+		btn1.disabled = verdadeiro;
+		btn1 = document.getElementById("btnDp2");
+		btn1.disabled = verdadeiro;
+		btn1 = document.getElementById("btnDp3");
+		btn1.disabled = verdadeiro;
+	}
 }
 
 function aleatorizador()
@@ -347,27 +355,17 @@ function perdeu ()
 {
 	desabilitar(true);
 	sumir(true);
-	var v1 = document.getElementById("bordaJogo");
+	var v1 = document.getElementById("btnReiniciar");
+	v1.style.visibility = "visible";
+	v1.disabled = false;
+	v1 = document.getElementById("bordaJogo");
 	v1.style.backgroundImage = "url('game-over.png')";
 }
 
 function cliqueIniciar()
 {
-	var v1 = document.getElementById("btnEstudar");
-	v1.style.visibility = "visible";
-	v1.disabled = false;
-	v1 = document.getElementById("Nivel");
-	v1.style.visibility = "visible";
-	v1.disabled = false;
-	v1 = document.getElementById("myProgress");
-	v1.style.visibility = "visible";
-	v1.disabled = false;
-	v1 = document.getElementById("Prova");
-	v1.style.visibility = "visible";
-	v1.disabled = false;
-	v1 = document.getElementById("PDf");
-	v1.style.visibility = "visible";
-	v1.disabled = false;
+	sumir(false);
+	desabilitar(false);
 	var v1 = document.getElementById("bordaJogo");
 	v1.style.backgroundImage = null;
 	v1 = document.getElementById("btnIniciar");
