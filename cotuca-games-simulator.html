@@ -3,19 +3,20 @@
     <head>
         <title>Cotuca Games | Cotuca Simulator</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="estilo-geral.css">
-        <link rel="icon" type="image/gif" href="logo-site.ico" sizes="16x16">
+        <link rel="stylesheet" type="text/css" href=".\css\estilo-geral.css">
+        <link rel="stylesheet" type="text/css" href=".\css\cotuca-simulator.css">
+        <link rel="icon" type="image/gif" href=".\img\geral\logo-site.ico" sizes="16x16">
     </head>
 
-    <script src="CotucaSimulator.js"></script>
+    <script src=".\js\CotucaSimulator.js"></script>
     
     <body onload="iniciar();">
         <nav id="menu">
             <ul>
-                <li><a class="logo" href="cotuca-games-home.html"><img class="logo" src="logo-site.png"></a></li>
+                <li><a class="logo" href="cotuca-games-home.html"><img class="logo" src=".\img\geral\logo-site.png"></a></li>
             </ul>
             <ul class="menu">
-                <li><a href="cotuca-games-home.html"><img class="home" src="home.png"></a></li>   
+                <li><a href="cotuca-games-home.html"><img class="home" src=".\img\geral\home.png"></a></li>   
                 <li><a id="abas" href="">JOGOS</a></li>
                 <li><a id="abas" href="">SOBRE</a></li>
             </ul>
@@ -26,37 +27,39 @@
         <hr class="separacao" style="top: 35px;">
 
         <div id="bordaJogo">
-            <p id="Nivel" style="position: absolute; top:10px; left: 195px; font-family: Century Gothic; font-size : 18pt; ">Nível de Estudo: 0</p>
+            <p id="Nivel">Nível de Estudo: 0</p>
         
-            <button id="btnEstudar" onclick="nEstudo++; atualizarTela();" style="width: 200px; height: 50px; position: absolute; top: 80px; left: 200px;">Estudar</button>
+            <button id="btnEstudar" onclick="nEstudo++; atualizarTela();">Estudar</button>
             
-            <p id="Prova" style="position: absolute; top:250px; left: 50px;"></p>
-            <p id="PDf" style="position: absolute; top:270px; left: 50px;"></p>
+            <p id="Prova"></p>
+            <p id="PDf"></p>
 
-            <div id="myProgress" style="width: 500px; position: absolute; top: 320px; left: 50px; background-color: grey">
-                <div id="barra" style="height: 50px; width: 0%; background-color: green"></div>
+            <div id="myProgress">
+                <div id="barra"></div>
             </div>
             
-            <button id="btnTrabalho" onclick="cliqueTrab();" disabled="true" style="visibility: hidden; width: 80px; height: 50px; position: absolute;">Trabalho <br> Surpresa</button>
+            <button id="btnTrabalho" onclick="cliqueTrab();" disabled="true">Trabalho <br> Surpresa</button>
 
-            <button id="btnDp" onclick="cliqueDp();" disabled="true" style="visibility: hidden; width: 40px; height: 50; position: absolute;">DP</button>
-            <button id="btnDp2" onclick="cliqueFalsaDp(2);" disabled="true" style="visibility: hidden; width: 40px; height: 50; position: absolute;">DP</button>
-            <button id="btnDp3" onclick="cliqueFalsaDp(3);" disabled="true" style="visibility: hidden; width: 40px; height: 50; position: absolute;">DP</button>
+            <button id="btnDp" onclick="cliqueDp();" disabled="true">DP</button>
+            <button id="btnDp2" onclick="cliqueFalsaDp(2);" disabled="true">DP</button>
+            <button id="btnDp3" onclick="cliqueFalsaDp(3);" disabled="true">DP</button>
 
             <button id="a" style="visibility: hidden;"></button>
 
-            <button id="btnIniciar" onclick="cliqueIniciar();" style="border-radius: 25px; font-family: Century Gothic; font-size: 18pt;background-image: linear-gradient(black, #2f2f2f); border-style: none; color: white; width: 150px; height: 35px; position: absolute; top: 340px; left: 40px">Iniciar</button>
+            <button id="btnIniciar" onclick="cliqueIniciar();">Iniciar</button>
 
-            <button id="btnReiniciar" onclick="location.reload();" disabled="true" style="visibility: hidden;border-radius: 25px; font-family: Century Gothic; font-size: 18pt;background-image: linear-gradient(black, #2f2f2f); border-style: none; color: white; width: 150px; height: 35px; position: absolute; top: 340px; left: 40px;">Reiniciar</button>
+            <button id="btnReiniciar" onclick="location.reload();" disabled="true">Reiniciar</button>
         </div>  
 
 		<hr class="separacao" style="top: 130px;">
 
 		<tituloDescricao class="tituloDescricao">DESCRIÇÃO</tituloDescricao>
 
-		<div id="descricao"></div>
+		<div id="descricao">
+            Este jogo é uma "simulação" do que realmente acontece no COTUCA ao longo dos nossos cursos, no qual você deverá estudar de acordo com a dificuldade de cada prova para poder ser aprovado e avançar para o próximo nível. Porém isso não é tão fácil quanto parece, já que há a possibilidade de surgir trabalhos surpresas e, até mesmo, as famosas "dependências", que irão interromper seus estudos. Quanto mais você estudar, mais difíceis serão as provas e é por esse motivo que é mais benéfico estudar de acordo com a dificuldade de cada nível. 
+        </div>
 
-		<footer class="footer">
+		<footer class="footer" style="top: 500px;">
         	&copy;2018 COTUCA GAMES<br>
         	Criado por Gustavo Henrique Béra e Pedro Henrique Marques Renó.
     	</footer>  

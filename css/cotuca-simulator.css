@@ -1,0 +1,139 @@
+	#bordaJogo{
+		position : relative;
+		top      : 80px; 
+		left     : 365px;
+		border   : 1px solid grey;
+		height   : 400px;
+		width    : 600px;  
+	}
+
+	.tituloJogo{
+		font-family : Century Gothic;
+		font-size   : 20pt; 
+		position    : relative;
+		top         : 25px;
+		left        : 25px;  
+	}
+
+	.tituloDescricao{
+		font-family : Century Gothic;
+		font-size   : 20pt; 
+		position    : relative;
+		top         : 150px;
+		left        : 25px;  
+	}
+
+	.separacao{
+		position : relative;
+		color    : grey;
+	}
+
+	#descricao{
+		width        : 95%;
+		font-family  : Century Gothic;
+		font-size    : 16pt;
+		position     : relative;
+		top          : 175px;
+		padding-left : 25px;
+		text-align   : justify;       
+	}
+
+	#Nivel{
+		position    : absolute;
+		top         :10px; 
+		left        : 195px; 
+		font-family : Century Gothic; 
+		font-size   : 18pt;
+	}
+
+	#btnEstudar{
+		width            : 200px; 
+		height           : 50px; 
+		position         : absolute; 
+		top              : 80px; 
+		left             : 200px;
+		border-radius    : 25px;
+		font-family      : Century Gothic;
+		font-size        : 18pt;
+		background-image : linear-gradient(black, #2f2f2f);
+		border-style     : none;
+		color            : white;   
+	}
+
+	#btnTrabalho{
+		border-radius    : 15px;
+		font-family      : Century Gothic;
+		font-size        : 10pt;
+		background-image : linear-gradient(#920303, #c93131);
+		border-style     : none;
+		color            : white;   
+		visibility       : hidden; 
+		width            : 80px; 
+		height           : 50px; 
+		position         : absolute;
+	}
+
+	#myProgress{
+		border-radius    : 25px;
+		width            : 500px; 
+		position         : absolute; 
+		top              : 320px; 
+		left             : 50px; 
+		background-color : grey;   
+	}
+
+	#barra{
+		border-radius    : 25px; 
+		background-image : linear-gradient(#36900a, #6de334);
+		height           : 50px; 
+		width            : 0%; 
+	}
+
+	#Prova{
+		font-family : Century Gothic; 
+		position    : absolute; 
+		top         : 250px; 
+		left        : 50px;
+	}
+
+	#PDf{
+		font-family : Century Gothic; 
+		position    : absolute; 
+		top         : 270px; 
+		left        : 50px;
+	}
+
+	#btnDp, #btnDp2, #btnDp3{
+		border-radius : 15px;
+		font-family   : Century Gothic;
+		border-style  : none;   
+		visibility    : hidden; 
+		width         : 40px; 
+		height        : 30px; 
+		position      : absolute;
+	}
+
+	#btnIniciar,#btnReiniciar{
+		border-radius    : 25px; 
+		font-family      : Century Gothic; 
+		font-size        : 18pt;
+		background-image : linear-gradient(black, #2f2f2f); 
+		border-style     : none; 
+		color            : white; 
+		width            : 150px; 
+		height           : 35px; 
+		position         : absolute; 
+		top              : 340px; 
+		left             : 40px
+	}
+
+	#btnIniciar:hover, 
+	#btnReiniciar:hover,
+	#btnEstudar:hover,
+	#btnTrabalho:hover{
+		transform : scale(1.05); 
+	}
+
+	#btnReiniciar{
+		visibility : hidden;
+	}

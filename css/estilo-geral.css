@@ -1,0 +1,68 @@
+	#menu ul{
+		padding          : 0px;
+		margin           : 0px;
+		background-color : #2b2c33; 
+		list-style       : none;
+		font-size        : 16pt; 
+		font-family      : Tw Cen MT;
+	}
+
+	#menu ul li { display : inline; }
+
+	#menu ul li a{
+		padding          : 5px 10px; 
+		display          : inline-block; 
+		color            : white;
+		text-decoration  : none; 
+	}
+
+	#menu .menu{
+		background-color : #fe2020; 
+		list-style       : none; 
+		box-shadow       : 0px 5px 10px rgba(0, 0, 0, 0.4); 
+	}
+
+	#menu .menu li a{
+		padding          : 5px 10px;
+		padding-bottom   : 3px; 
+		display          : inline-block; 
+		color            : white;
+		text-decoration  : none;
+		border-bottom    : 3px solid #fe2020;    
+	}
+
+	#menu .menu li a:hover{
+		background-color : rgba(0, 0, 0, 0.3); 
+		border-bottom    : 3px solid white;  
+		background-size  : 30px 60px; 
+	}
+
+	#menu .menu li #abas:hover{
+		border-top       : 2px solid rgba(0, 0, 0, 0.1); 
+		border-bottom    : 3px solid white;  
+		background-size  : 30px 60px; 
+	}
+
+	.logo{
+		height : 70px;
+		width  : 70px;  
+	}
+
+	.home{
+		height : 20px;
+		width  : 20px;  
+	}
+
+	.footer{
+    	position         : relative;
+    	padding          : 0px;
+    	margin           : 0px;  
+    	width            : 100%;
+    	padding-top      : 25px;  
+    	height           : 80px;
+    	background-color : #2b2c33; 
+    	text-align       : center;
+    	font-family      : Century Gothic;
+    	font-size        : 16px; 
+    	color            : #FFFFFF; 
+	}
