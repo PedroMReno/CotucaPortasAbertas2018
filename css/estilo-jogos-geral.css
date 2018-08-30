@@ -1,0 +1,63 @@
+#bordaJogo{
+		position : relative;
+		top      : 80px; 
+		left     : 365px;
+		border   : 1px solid grey;
+		height   : 400px;
+		width    : 600px;  
+	}
+
+	.tituloJogo{
+		font-family : Century Gothic;
+		font-size   : 20pt; 
+		position    : relative;
+		top         : 25px;
+		left        : 25px;  
+	}
+
+	.tituloDescricao{
+		font-family : Century Gothic;
+		font-size   : 20pt; 
+		position    : relative;
+		top         : 150px;
+		left        : 25px;  
+	}
+
+	.separacao{
+		position : relative;
+		color    : grey;
+	}
+
+	#descricao{
+		width        : 95%;
+		font-family  : Century Gothic;
+		font-size    : 16pt;
+		position     : relative;
+		top          : 175px;
+		padding-left : 25px;
+		text-align   : justify;       
+	}
+
+	#btnIniciar,#btnReiniciar{
+		border-radius    : 25px; 
+		font-family      : Century Gothic; 
+		font-size        : 18pt;
+		background-image : linear-gradient(black, #2f2f2f); 
+		border-style     : none; 
+		color            : white; 
+		width            : 150px; 
+		height           : 35px; 
+		position         : absolute; 
+		top              : 340px; 
+		left             : 40px
+	}
+
+	#btnIniciar:hover, 
+	#btnReiniciar:hover,
+	{
+		transform : scale(1.05); 
+	}
+
+	#btnReiniciar{
+		visibility : hidden;
+	}
