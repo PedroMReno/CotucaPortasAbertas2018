@@ -1,0 +1,43 @@
+#btns button
+{
+	width: 100px;
+    height: 100px;
+    position:absolute;
+    visibility: hidden;
+}
+
+#btn1
+{
+	left: 150px;
+    top: 25px;
+    background-color: lightcoral;
+}
+
+#btn2
+{
+	right: 150px;
+    top: 25px;
+    background-color: lightblue;
+}
+
+#btn3
+{
+	left: 150px;
+    bottom: 75px;
+    background-color: lightgreen;
+}
+
+#btn4
+{
+	right: 150px;
+    bottom: 75px;
+    background-color: khaki;
+}
+
+#lPontos
+{
+    left: 25px;
+    bottom: 25px;
+    position:absolute;
+    visibility: hidden;
+}

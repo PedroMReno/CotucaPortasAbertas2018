@@ -1,17 +1,17 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>Cotuca Games | </title>
+        <title>Cotuca Games | Gênios</title>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href=".\css\estilo-geral.css">
         <link rel="stylesheet" type="text/css" href=".\css\estilo-jogos-geral.css">
-        <link rel="stylesheet" type="text/css" href=".\css\.css">
+        <link rel="stylesheet" type="text/css" href=".\css\cotuca-genios.css">
         <link rel="icon" type="image/gif" href=".\img\geral\logo-site.ico" sizes="16x16">
     </head>
 
-    <script src=".\js\.js"></script>
+    <script src=".\js\CotucaGenios.js"></script>
     
-    <body>
+    <body onload="iniciar();">
         <nav id="menu">
             <ul>
                 <li><a class="logo" href="cotuca-games-home.html"><img class="logo" src=".\img\geral\logo-site.png"></a></li>
@@ -23,12 +23,28 @@
             </ul>
         </nav>
 
-        <tituloJogo class="tituloJogo">NOME DO JOGO</tituloJogo>
+        <tituloJogo class="tituloJogo">Gênios</tituloJogo>
 
         <hr class="separacao" style="top: 35px;">
 
         <div id="bordaJogo">
-            
+            <div id="btns">
+                <button name="btn1" id="btn1" disabled="true" onclick="Click(1);"></button>
+
+                <button name="btn2" id="btn2" disabled="true" onclick="Click(2);"></button>
+
+                <button name="btn3" id="btn3" disabled="true" onclick="Click(3);"></button>
+
+                <button name="btn4" id="btn4" disabled="true" onclick="Click(4);"></button>
+            </div>
+
+            <button id="a" style="visibility: hidden;"></button>
+
+            <button id="btnIniciar" onclick="cliqueIniciar();">Iniciar</button>
+
+            <button id="btnReiniciar" onclick="location.reload();" disabled="true">Reiniciar</button>
+
+            <label id="lPontos">Pontuação: 0</label>
         </div>  
 
 		<hr class="separacao" style="top: 130px;">
@@ -36,7 +52,8 @@
 		<tituloDescricao class="tituloDescricao">DESCRIÇÃO</tituloDescricao>
 
 		<div id="descricao">
-            Sou uma descrição
+            Este jogo é inspirado no clássico "Gênios". Para ganhar este jogo você deve repetir a sequência que for apresentada sem errar um clique!
+            Só tome cuidado para não queimar seu cérebro!
         </div>
 
 		<footer class="footer" style="top: 500px;">
