@@ -141,7 +141,7 @@ function iniciar()
     v1.style.backgroundImage = "url('./img/jogos/geral/inicioGenerico.png')";
 }
 
-function cliqueIniciar()
+async function cliqueIniciar()
 {
     var v1 = document.getElementById("bordaJogo");
     v1.style.backgroundImage = null;
@@ -157,6 +157,9 @@ function cliqueIniciar()
     TravarBotoes(true);
 
     NovasCores();
+
+    await sleep(500);
+
     Piscar();
 }
 

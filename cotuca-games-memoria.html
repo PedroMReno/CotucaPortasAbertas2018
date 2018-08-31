@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Cotuca Games | Jogo da Memória</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href=".\css\estilo-geral.css">
+        <link rel="stylesheet" type="text/css" href=".\css\estilo-jogos-geral.css">
+        <link rel="stylesheet" type="text/css" href=".\css\cotuca-memoria.css">
+        <link rel="icon" type="image/gif" href=".\img\geral\logo-site.ico" sizes="16x16">
+    </head>
+
+    <script src=".\js\CotucaMemoria.js"></script>
+    
+    <body onload="iniciar();">
+        <nav id="menu">
+            <ul>
+                <li><a class="logo" href="cotuca-games-home.html"><img class="logo" src=".\img\geral\logo-site.png"></a></li>
+            </ul>
+            <ul class="menu">
+                <li><a href="cotuca-games-home.html"><img class="home" src=".\img\geral\home.png"></a></li>   
+                <li><a id="abas" href="">JOGOS</a></li>
+                <li><a id="abas" href="">SOBRE</a></li>
+            </ul>
+        </nav>
+
+        <tituloJogo class="tituloJogo">Jogo da Memória</tituloJogo>
+
+        <hr class="separacao" style="top: 35px;">
+
+        <div id="bordaJogo">
+
+            <div id="linha1">
+                <img id="0"  value = "a" onclick="TrocaImagem(this);" src="img/jogos/memoria/verso.png">
+                <img id="1"  name = ""  onclick="TrocaImagem(this);" src="img/jogos/memoria/verso.png">
+                <img id="2"  name = ""  onclick="TrocaImagem(this);" src="img/jogos/memoria/verso.png">
+                <img id="3"  name = ""  onclick="TrocaImagem(this);" src="img/jogos/memoria/verso.png">
+            </div>
+            
+            <div id="linha2">
+                <img id="4"  name = ""  onclick="TrocaImagem(this);" src="img/jogos/memoria/verso.png">
+                <img id="5"  name = ""  onclick="TrocaImagem(this);" src="img/jogos/memoria/verso.png">
+                <img id="6"  name = ""  onclick="TrocaImagem(this);" src="img/jogos/memoria/verso.png">
+                <img id="7"  name = ""   onclick="TrocaImagem(this);" src="img/jogos/memoria/verso.png">
+            </div>
+            
+            <div id="linha3">
+                <img id="8"  name = ""  onclick="TrocaImagem(this);" src="img/jogos/memoria/verso.png">
+                <img id="9"  name = ""  onclick="TrocaImagem(this);" src="img/jogos/memoria/verso.png">
+                <img id="10" name = ""  onclick="TrocaImagem(this);" src="img/jogos/memoria/verso.png">
+                <img id="11" name = ""  onclick="TrocaImagem(this);" src="img/jogos/memoria/verso.png">
+            </div>
+            
+            <div id="linha4">
+                <img id="12" name = ""  onclick="TrocaImagem(this);" src="img/jogos/memoria/verso.png">
+                <img id="13" name = ""  onclick="TrocaImagem(this);" src="img/jogos/memoria/verso.png">
+                <img id="14" name = ""  onclick="TrocaImagem(this);" src="img/jogos/memoria/verso.png">
+                <img id="15" name = ""  onclick="TrocaImagem(this);" src="img/jogos/memoria/verso.png">
+            </div>
+        
+        <label id="pontos">Pontuação: 0</label>
+
+        <p id = "nomeImagem">VAZIO</p>
+        <p id = "idImagem">VAZIO</p>
+
+        <button id="btnIniciar" onclick="cliqueIniciar();">Iniciar</button>
+
+        <button id="btnReiniciar" onclick="location.reload();" disabled="true">Reiniciar</button>
+
+        </div>  
+
+		<hr class="separacao" style="top: 130px;">
+
+		<tituloDescricao class="tituloDescricao">DESCRIÇÃO</tituloDescricao>
+
+		<div id="descricao">
+            Sou uma descrição
+        </div>
+
+		<footer class="footer" style="top: 500px;">
+        	&copy;2018 COTUCA GAMES<br>
+        	Criado por Gustavo Henrique Béra e Pedro Henrique Marques Renó.
+    	</footer>  
+
+    </body>
+</html>

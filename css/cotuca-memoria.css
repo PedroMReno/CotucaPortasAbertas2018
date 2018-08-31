@@ -1,0 +1,22 @@
+#bordaJogo img
+{
+    height: 70px;
+    width: 70px;
+    background-size: contain;
+
+    position: relative;
+    left: 150px;
+    top: 25px;
+}
+
+#bordaJogo p
+{
+	visibility: hidden;
+}
+
+#pontos
+{
+	position: absolute;
+	bottom: 40px;
+	left: 20px;
+}
