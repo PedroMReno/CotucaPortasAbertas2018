@@ -1,0 +1,26 @@
+#fundo
+{
+	background-color: black;
+	width: 310px;
+	height: 310px;
+
+	position: absolute;
+	left: 150px;
+	top: 30px;
+}
+
+#fundo button
+{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+
+	font-size: 30px;
+}
+
+#vez
+{
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+}
