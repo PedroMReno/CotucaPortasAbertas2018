@@ -345,7 +345,7 @@ function iniciar ()
 	desabilitar(true);
 	sumir(true);
 	var v1 = document.getElementById("bordaJogo");
-	v1.style.backgroundImage = "url('./img/jogos/geral/inicioGenerico.png')";
+	v1.style.backgroundImage = "url('./img/jogos/cotuca-simulator/1.png')";
 	v1 = document.getElementById("btnIniciar");
 	v1.style.visibility = "visible";
 	v1.disabled = false;
@@ -359,7 +359,7 @@ function perdeu ()
 	v1.style.visibility = "visible";
 	v1.disabled = false;
 	v1 = document.getElementById("bordaJogo");
-	v1.style.backgroundImage = "url('./img/jogos/geral/game-over.png')";
+	v1.style.backgroundImage = "url('./img/jogos/cotuca-simulator/2.png')";
 }
 
 function cliqueIniciar()

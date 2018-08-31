@@ -1,0 +1,19 @@
+#quadroJogos{
+	position : relative;
+	top      : 115px; 
+	left     : 365px;
+	width    : 615px; 
+}
+
+#icone{
+	height        : 200px;
+	width         : 200px; 
+	border        : 1px solid grey;
+	border-radius : 15px;
+}
+
+#icone:hover{
+	transition-timing-function : ease-in; 
+	transition                 : 0.5s;  
+	transform                  : scale(1.05);
+}

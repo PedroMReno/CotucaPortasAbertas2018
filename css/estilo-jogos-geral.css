@@ -42,14 +42,14 @@
 		border-radius    : 25px; 
 		font-family      : Century Gothic; 
 		font-size        : 18pt;
-		background-image : linear-gradient(black, #2f2f2f); 
-		border-style     : none; 
+		background-image : linear-gradient(#ffa800, #ffd133); 
+		border           : 1px solid white; 
 		color            : white; 
-		width            : 150px; 
-		height           : 35px; 
+		width            : 185px; 
+		height           : 40px; 
 		position         : absolute; 
 		top              : 340px; 
-		left             : 40px
+		left             : 215px
 	}
 
 	#btnIniciar:hover, 

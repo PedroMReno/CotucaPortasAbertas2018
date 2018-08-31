@@ -31,16 +31,24 @@
 		border-bottom    : 3px solid #fe2020;    
 	}
 
+	#menu .menu li #abas{
+		border-top : 2px solid #fe2020;
+	}
+
 	#menu .menu li a:hover{
-		background-color : rgba(0, 0, 0, 0.3); 
-		border-bottom    : 3px solid white;  
-		background-size  : 30px 60px; 
+		transition-timing-function : ease-in;
+		transition                 : 0.5s;
+		background-color           : rgba(0, 0, 0, 0.3); 
+		border-bottom              : 3px solid white;  
+		background-size            : 30px 60px; 
 	}
 
 	#menu .menu li #abas:hover{
-		border-top       : 2px solid rgba(0, 0, 0, 0.1); 
-		border-bottom    : 3px solid white;  
-		background-size  : 30px 60px; 
+		transition-timing-function : ease-in;
+		transition                 : 0.5s; 
+		border-top                 : 2px solid rgba(0, 0, 0, 0.1); 
+		border-bottom              : 3px solid white;  
+		background-size            : 30px 60px; 
 	}
 
 	.logo{
