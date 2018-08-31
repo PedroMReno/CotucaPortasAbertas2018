@@ -25,28 +25,28 @@ async function Piscar()
         switch (ordem[i])
         {
             case 1:
-                btn1.style.backgroundColor = "red";
+                btn1.style.backgroundColor = "green";
                 break;
 
             case 2:
-                btn2.style.backgroundColor = "blue";
+                btn2.style.backgroundColor = "yellow";
                 break;
 
             case 3:
-                btn3.style.backgroundColor = "green";
+                btn3.style.backgroundColor = "red";
                 break;
 
             case 4:
-                btn4.style.backgroundColor = "yellow";
+                btn4.style.backgroundColor = "blue";
                 break;
         }
 
         await sleep(500);
 
-        btn1.style.backgroundColor = "lightcoral";
-        btn2.style.backgroundColor = "lightblue";
-        btn3.style.backgroundColor = "lightgreen";
-        btn4.style.backgroundColor = "khaki";
+        btn1.style.backgroundColor = "lightgreen";
+        btn2.style.backgroundColor = "khaki";
+        btn3.style.backgroundColor = "lightcoral";
+        btn4.style.backgroundColor = "lightblue";
 
         await sleep(200);
     }

@@ -53,7 +53,7 @@
 	}
 
 	#btnIniciar:hover, 
-	#btnReiniciar:hover,
+	#btnReiniciar:hover
 	{
 		transform : scale(1.05); 
 	}

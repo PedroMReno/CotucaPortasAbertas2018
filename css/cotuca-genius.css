@@ -1,0 +1,53 @@
+#btns button
+{
+	width      : 125px;
+    height     : 125px;
+    position   : absolute;
+    visibility : hidden;
+}
+
+#btn1
+{
+	left                   : 165px;
+    top                    : 65px;
+    background-color       : lightgreen;
+    border-top-left-radius : 180px;
+    border-style           : none; 
+}
+
+#btn2
+{
+	right                   : 165px;
+    top                     : 65px;
+    background-color        : khaki;
+    border-top-right-radius : 180px;
+    border-style            : none;
+}
+
+#btn3
+{
+	left                      : 165px;
+    bottom                    : 65px;
+    background-color          : lightcoral;
+    border-bottom-left-radius : 180px;
+    border-style              : none;
+}
+
+#btn4
+{
+	right                      : 165px;
+    bottom                     : 65px;
+    background-color           : lightblue;
+    border-bottom-right-radius : 180px;
+    border-style               : none;
+}
+
+#lPontos
+{
+    left        : 25px;
+    bottom      : 25px;
+    position    : absolute;
+    visibility  : hidden;
+    font-family : Century Gothic;
+    font-size   : 16pt;  
+}
