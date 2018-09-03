@@ -138,13 +138,14 @@ function desaparecer(verdade)
 function iniciar()
 {
     var v1 = document.getElementById("bordaJogo");
-    v1.style.backgroundImage = "url('./img/jogos/geral/inicioGenerico.png')";
+    v1.style.backgroundImage = "url('./img/jogos/cotuca-genius/1.png')";
 }
 
 async function cliqueIniciar()
 {
     var v1 = document.getElementById("bordaJogo");
     v1.style.backgroundImage = null;
+    v1.style.backgroundColor = "#3b3d3e";
     v1 = document.getElementById("btnIniciar");
     v1.style.visibility = "hidden";
     v1.disabled = true;
@@ -168,7 +169,7 @@ function perdeu()
     TravarBotoes(true);
     desaparecer(true);
     var v1 = document.getElementById("bordaJogo");
-    v1.style.backgroundImage = "url('./img/jogos/geral/game-over.png')";
+    v1.style.backgroundImage = "url('./img/jogos/cotuca-genius/2.png')";
     v1 = document.getElementById("btnReiniciar");
     v1.style.visibility = "visible";
     v1.disabled = false;

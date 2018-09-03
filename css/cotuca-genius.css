@@ -49,5 +49,6 @@
     position    : absolute;
     visibility  : hidden;
     font-family : Century Gothic;
-    font-size   : 16pt;  
+    font-size   : 16pt; 
+    color       : white; 
 }
