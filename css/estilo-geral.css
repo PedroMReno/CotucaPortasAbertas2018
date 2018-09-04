@@ -32,7 +32,8 @@
 	}
 
 	#menu .menu li #abas{
-		border-top : 2px solid #fe2020;
+		border-top       : 2px solid #fe2020; 
+		float            : right;
 	}
 
 	#menu .menu li a:hover{
