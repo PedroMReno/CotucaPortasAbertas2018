@@ -20,7 +20,7 @@ function TrocaImagem(img)
             document.getElementById("idImagem").innerHTML = img.id;
         }
         
-        else
+        else if(img.src != document.getElementById("nomeImagem").innerHTML)
         {
             img.src = "img/jogos/memoria/" + posicao[img.id]  + ".png";
             
