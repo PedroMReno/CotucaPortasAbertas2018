@@ -1,7 +1,7 @@
 var turno = true;
 var qtdeCliques = 0;
 
-function desabilitar(verdade) 
+function desabilitar(verdade)
 {
 	var desa = "hidden";
 
