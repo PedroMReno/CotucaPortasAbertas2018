@@ -19,7 +19,7 @@
 	#menu .menu{
 		background-color : #fe2020; 
 		list-style       : none; 
-		box-shadow       : 0px 5px 10px rgba(0, 0, 0, 0.4); 
+		box-shadow       : 0px 5px 10px rgba(0, 0, 0, 0.15); 
 	}
 
 	#menu .menu li a{
@@ -65,7 +65,7 @@
 	.fundoSite
 	{
 	    position: absolute;
-	    top: 19%;
+	    top: 145px;
 	    left: 0.6%;
 	    max-width: 98.9%;
 	    max-height: 87%;
@@ -95,4 +95,5 @@
     	font-family      : Century Gothic;
     	font-size        : 16px; 
     	color            : #FFFFFF; 
+    	box-shadow       : 0px -10px 10px rgba(0, 0, 0, 0.15);
 	}
