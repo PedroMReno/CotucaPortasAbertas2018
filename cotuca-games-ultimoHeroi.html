@@ -1,18 +1,57 @@
 <html>
     <head>
         <title>Cotuca Games | O Último Herói</title>
-        <meta charset="utf-8">
-        <script src=".\js\CotucaUltimoHeroi.js"></script>
-    
+        <meta charset="utf-8">        
+        <link rel="stylesheet" type="text/css" href=".\css\estilo-geral.css">
+        <link rel="stylesheet" type="text/css" href=".\css\estilo-jogos-geral.css">
+        <link rel="stylesheet" type="text/css" href=".\css\cotuca-ultimoHeroi.css">
+        <link rel="icon" type="image/gif" href=".\img\geral\logo-site.ico" sizes="16x16">    
     </head>
+
+    <script src=".\js\CotucaUltimoHeroi.js"></script>
+
     <body onload="Iniciar(); pause();">
-        <canvas id="meuCanvas" width="512" height="480"
-                style="border:1px solid #000;">
-            Atualize seu browser para ver o CANVAS
-        </canvas>
-        <br>
-        <label id="pt">Pontuacao: 0</label>
-        <br>
+        <nav id="menu">
+            <ul>
+                <li><a class="logo" href="cotuca-games-home.html"><img class="logo" src=".\img\geral\logo-site.png"></a></li>
+            </ul>
+            <ul class="menu">
+                <li><a href="cotuca-games-home.html"><img class="home" style="padding-bottom: 5px;" src=".\img\geral\home.png"></a></li>                
+                <li><a id="abas" href="">SOBRE</a></li>   
+                <li><a id="abas" href="cotuca-games-jogos.html">JOGOS</a></li>
+            </ul>
+        </nav>
+
+        <tituloJogo class="tituloJogo">O ÚLTIMO HERÓI</tituloJogo>
+
+        <hr class="separacao" style="top: 35px;">        
+
+        <center>
+            <canvas id="meuCanvas" width="512" height="480"
+                style="border:1px solid #000; position: relative; top: 80px">
+                Atualize seu browser para ver o CANVAS
+            </canvas>
+
+            <br>
+            <label id="pt">Pontuacao: 0</label>
+            <br>
+        </center>
+        
         <input type="button" onclick="pause();" value="||" disabled="true" style="visibility: hidden;">
+
+        <hr class="separacao" style="top: 130px;">
+
+        <tituloDescricao class="tituloDescricao">DESCRIÇÃO</tituloDescricao>
+
+        <div id="descricao">
+            Quem não conhece o famoso jogo da memória? Aqui ele funciona quase igual ao original, com um pequeno detalhe: toda vez que você acertar você ganha três pontos
+            , ao errar, perde um ponto. O código inicial deste jogo foi matéria de uma de nossas aulas!
+        </div>
+
+        <footer class="footer" style="top: 500px;">
+            &copy;2018 COTUCA GAMES<br>
+            Criado por Gustavo Henrique Béra, Pedro Henrique Marques Renó e Vitor Ramos.
+        </footer>
+
     </body>
 </html>
