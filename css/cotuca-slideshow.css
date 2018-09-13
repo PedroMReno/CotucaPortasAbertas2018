@@ -1,0 +1,64 @@
+
+.w3-container:after,.w3-container:before,.w3-panel:after,.w3-panel:before,.w3-row:after,.w3-row:before,.w3-row-padding:after,.w3-row-padding:before,
+.w3-center
+{
+	text-align  :center;
+	position    :relative;
+	top: 200%;
+}
+
+.w3-section,.w3-code
+{
+	margin-top:16px!important;
+	margin-bottom:16px!important;
+}
+
+.w3-large
+{
+	font-size:18px!important;
+}
+
+.w3-text-white,.w3-hover-text-white:hover
+{
+	color:#fff!important;
+}
+
+.w3-display-bottommiddle
+{
+	position:absolute;left:50%;bottom:0;transform:translate(-50%,0%);-ms-transform:translate(-50%,0%)
+}
+
+.w3-text-khaki,.w3-hover-text-khaki:hover
+{
+	color:#b4aa50!important;
+}
+
+.w3-badge,.w3-tag
+{
+	background-color:#000;color:#fff;display:inline-block;padding-left:8px;padding-right:8px;text-align:center;
+}
+
+.w3-badge
+{
+	border-radius:50%;
+}
+
+.w3-border-0
+{
+	border:0!important;
+}
+
+.w3-border
+{
+	border:1px solid #ccc!important;
+}
+
+.w3-transparent,.w3-hover-none:hover
+{
+	background-color:transparent!important;
+}
+
+.w3-white,.w3-hover-white:hover
+{
+	color:white!important;background-color:white!important;
+}
