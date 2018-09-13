@@ -63,10 +63,6 @@
 	color:white!important;background-color:white!important;
 }
 
-
-
-
-
 .mySlides 
 {
 	display:none;
@@ -80,7 +76,7 @@
 	cursor:pointer; 
 	color: white;
 	position: relative;
-	top: -120px;
+	top: -230px;
 }
 
 .w3-left
@@ -88,7 +84,7 @@
 	cursor:pointer; 
 	color: white;
 	position: relative;
-	top: -65px;
+	top: -180px;
 	left: -1%;
 	max-width: 10%;
 }
@@ -98,14 +94,14 @@
 	cursor:pointer; 
 	color: white;
 	position: relative;
-	top: -85px;
+	top: -200px;
 	left: 90%;
 	max-width: 10%;
 }
 
 .w3-badge 
 {
-	height:13px;
-	width:13px;
+	min-height:13px;
+	min-width:13px;
 	padding:0;
 }

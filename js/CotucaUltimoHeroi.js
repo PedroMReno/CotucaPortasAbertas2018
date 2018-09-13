@@ -146,10 +146,10 @@ document.onkeydown=function MovimentoDoJogador(event){
         var andou = true;
         // sorteia a direção
         switch(event.keyCode){
-            case 39: xHeroi += 10; break;
-            case 40: yHeroi += 10; break;
-            case 37: xHeroi -= 10; break;
-            case 38: yHeroi -= 10; break;
+            case 68: xHeroi += 10; break;
+            case 83: yHeroi += 10; break;
+            case 65: xHeroi -= 10; break;
+            case 87: yHeroi -= 10; break;
         }
 
         if(xHeroi < 26)
@@ -179,16 +179,16 @@ document.onkeydown=function MovimentoDoJogador(event){
         if(andou && m2)
         {
             switch(event.keyCode){
-            case 39: 
+            case 68: 
                 if(!m2Mov)
                     xMonstro2 += 3; 
                 break;
-            case 37: 
+            case 83: 
                 if(m2Mov)
                     xMonstro2 -= 3; 
                 break;
-            case 40: yMonstro2 += 10; break;
-            case 38: yMonstro2 -= 10; break;
+            case 65: yMonstro2 += 10; break;
+            case 87: yMonstro2 -= 10; break;
         }
         }
 
