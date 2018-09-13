@@ -8,50 +8,6 @@
     <link rel="stylesheet" type="text/css" href=".\css\estilo-geral.css">
     <link rel="icon" type="image/gif" href=".\img\geral\logo-site.ico" sizes="16x16">
 
-    <style>
-		.mySlides {
-			display:none;
-			position: relative;
-			top: 640px;
-			left: 0.3%;
-		}
-
-		.w3-badge 
-		{
-			cursor:pointer; 
-			color: white;
-			position: relative;
-			top: -120px;
-		}
-
-		.w3-left
-		{
-			cursor:pointer; 
-			color: white;
-			position: relative;
-			top: -65px;
-			left: -1%;
-			max-width: 10%;
-		}
-
-			.w3-right
-		{
-			cursor:pointer; 
-			color: white;
-			position: relative;
-			top: -85px;
-			left: 90%;
-			max-width: 10%;
-		}
-
-		.w3-badge 
-		{
-			height:13px;
-			width:13px;
-			padding:0;
-		}
-	</style>
-
 </head>
 <body>
 	<nav id="menu">
@@ -92,38 +48,7 @@
             Criado por Gustavo Henrique Béra, Pedro Henrique Marques Renó e Vitor Ramos.   
     </footer> 
 
-    <script type="text/javascript">
-		  var slideIndex = 1;
-		  showDivs(slideIndex);
-
-		  function plusDivs(n) {
-		   	  showDivs(slideIndex += n);
-		  }
-
-		  function currentDiv(n) {
-		    showDivs(slideIndex = n);
-		  }
-
-		  function showDivs(n) {
-		    var i;
-		    var x = document.getElementsByClassName("mySlides");
-		    var dots = document.getElementsByClassName("demo");
-
-		    if (n > x.length) {slideIndex = 1}    
-		      if (n < 1) {slideIndex = x.length}
-		        for (i = 0; i < x.length; i++) 
-		            {
-		              x[i].style.display = "none";  
-		            }
-		    
-		        for (i = 0; i < dots.length; i++) 
-		            {
-		              dots[i].className = dots[i].className.replace(" w3-white", "");
-		            }
-
-		        x[slideIndex-1].style.display = "block";  
-		        dots[slideIndex-1].className += " w3-white";
-		  }
+    <script type="text/javascript" src=".\js\CotucaSlideShow.js">
 	</script>
      
 </body>
