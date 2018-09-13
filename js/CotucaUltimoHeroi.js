@@ -11,6 +11,9 @@ var yMonstro2 = 300;
 var m2 = false;
 var m2Mov = false;
 
+var xMonstro3 = 240;
+var yMonstro3 = 100;
+
 var xHeroi = 240;
 var yHeroi = 200;
 
@@ -36,6 +39,9 @@ imgMonstro.src="img/jogos/cotuca-ultimoHeroi/monstro.png";
 var imgMonstro2 = new Image();
 imgMonstro2.src="img/jogos/cotuca-ultimoHeroi/monstro2.png";
 
+var imgMonstro3 = new Image();
+imgMonstro3.src="img/jogos/cotuca-ultimoHeroi/monstro3.png";
+
 // FUNÇÕES ----------------------
 function AtualizaTela(){
     objContexto.drawImage(imgFundo,0,0);
@@ -43,6 +49,7 @@ function AtualizaTela(){
     objContexto.drawImage(imgHeroi,xHeroi,yHeroi);
     objContexto.drawImage(imgMonstro, xMonstro, yMonstro);
     objContexto.drawImage(imgMonstro2, xMonstro2, yMonstro2);
+    objContexto.drawImage(imgMonstro3, xMonstro3, yMonstro3);
 }
 
 function Iniciar(){
@@ -139,10 +146,10 @@ document.onkeydown=function MovimentoDoJogador(event){
         var andou = true;
         // sorteia a direção
         switch(event.keyCode){
-            case 68: xHeroi += 10; break;
-            case 83: yHeroi += 10; break;
-            case 65: xHeroi -= 10; break;
-            case 87: yHeroi -= 10; break;
+            case 39: xHeroi += 10; break;
+            case 40: yHeroi += 10; break;
+            case 37: xHeroi -= 10; break;
+            case 38: yHeroi -= 10; break;
         }
 
         if(xHeroi < 26)
@@ -172,16 +179,16 @@ document.onkeydown=function MovimentoDoJogador(event){
         if(andou && m2)
         {
             switch(event.keyCode){
-            case 68: 
+            case 39: 
                 if(!m2Mov)
                     xMonstro2 += 3; 
                 break;
-            case 65: 
+            case 37: 
                 if(m2Mov)
                     xMonstro2 -= 3; 
                 break;
-            case 83: yMonstro2 += 10; break;
-            case 87: yMonstro2 -= 10; break;
+            case 40: yMonstro2 += 10; break;
+            case 38: yMonstro2 -= 10; break;
         }
         }
 
@@ -191,36 +198,50 @@ document.onkeydown=function MovimentoDoJogador(event){
 
 function testeColisao()
 {
-    //Monstro1
-    var xDif = xHeroi - xMonstro;
-    if(xDif < 0)
-        xDif = xDif * - 1;
-
-    var yDif = yHeroi - yMonstro;
-    if(yDif < 0)
-        yDif = yDif * - 1;
-
-    if(xDif < 33 && yDif < 33 && !gameOver)
+    if(!gameOver)
     {
-        alert("Game Over");
-        gameOver = true;
-        location.reload();
-    }
+        //Monstro1
+        var xDif = xHeroi - xMonstro;
+        if(xDif < 0)
+            xDif = xDif * - 1;
 
-    //Monstro2
-    xDif = xHeroi - xMonstro2;
-    if(xDif < 0)
-        xDif = xDif * - 1;
+        var yDif = yHeroi - yMonstro;
+        if(yDif < 0)
+            yDif = yDif * - 1;
 
-    yDif = yHeroi - yMonstro2;
-    if(yDif < 0)
-        yDif = yDif * - 1;
+        if(xDif < 33 && yDif < 33 && !gameOver)
+            gameOver = true;
 
-    if(xDif < 31 && yDif < 31 && !gameOver)
-    {
-        alert("Game Over");
-        gameOver = true;
-        location.reload();
+        //Monstro2
+        xDif = xHeroi - xMonstro2;
+        if(xDif < 0)
+            xDif = xDif * - 1;
+
+        yDif = yHeroi - yMonstro2;
+        if(yDif < 0)
+            yDif = yDif * - 1;
+
+        if(xDif < 31 && yDif < 31 && !gameOver)
+            gameOver = true;
+
+        //Monstro3
+        xDif = xHeroi - xMonstro3;
+        if(xDif < 0)
+            xDif = xDif * - 1;
+
+        yDif = yHeroi - yMonstro3;
+        if(yDif < 0)
+            yDif = yDif * - 1;
+
+        if(xDif < 31 && yDif < 31 && !gameOver)
+            gameOver = true;
+
+        if(gameOver)
+        {
+            AtualizaTela();
+            alert("Game Over");
+            location.reload();
+        }
     }
 }
 
