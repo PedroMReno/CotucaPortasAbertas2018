@@ -11,14 +11,18 @@ var yMonstro2 = 300;
 var m2 = false;
 var m2Mov = false;
 
-var xMonstro3 = 240;
-var yMonstro3 = 100;
+var xMonstro3 = 5000;
+var yMonstro3 = 300;
+var m3Mov = -1;
+var m3 = false;
+var m3UltimoMov = false;
 
 var xHeroi = 240;
 var yHeroi = 200;
 
 var timerGeral = null;
 var timerMonstro = null;
+var timerMonstro3 = null;
 
 var jogando = false;
 var mover = true;
@@ -57,8 +61,10 @@ function Iniciar(){
     objContexto = objCanvas.getContext("2d");
     timerGeral = setInterval(function(){loop()},1);
     timerMonstro = setInterval(function(){MovimentoDoMonstro()},100);
+    timerMonstro3 = setInterval(function(){MovimentoDoMonstro3()},100);
 
     MovimentoDoMonstro();
+    MovimentoDoMonstro3();
     AtualizaTela();
     loop();
 }
@@ -121,10 +127,82 @@ function MovimentoDoMonstro(){
     }
 }
 
+function MovimentoDoMonstro3(){
+    if(jogando && m3)
+    {
+        var andou = true;
+        var mudar =  Math.floor(Math.random() * 10);
+
+        if(m3Mov < 0 || mudar > 7)
+            m3Mov = Math.floor(Math.random() * 6);
+
+        switch(m3Mov){
+            case 0: xMonstro3 += 10; break;
+            case 1: yMonstro3 += 10; break;
+            case 2: xMonstro3 -= 10; break;
+            case 3: yMonstro3 -= 10; break;
+            case 4:
+                if(m3UltimoMov)
+                {
+                    if(xMonstro3 > xHeroi)
+                        xMonstro3 -= 10;
+                    if(xMonstro3 < xHeroi)
+                        xMonstro3 += 10;
+
+                    if(yMonstro3 > yHeroi)
+                        yMonstro3 -= 10;
+                    if(yMonstro3 < yHeroi)
+                        yMonstro3 += 10;
+
+                    m3UltimoMov = false;
+                }
+                else
+                {
+                    if(yMonstro3 > yHeroi)
+                        yMonstro3 -= 10;
+                    if(yMonstro3 < yHeroi)
+                        yMonstro3 += 10;
+
+                    if(xMonstro3 > xHeroi)
+                        xMonstro3 -= 10;
+                    if(xMonstro3 < xHeroi)
+                        xMonstro3 += 10;
+
+                    m3UltimoMov = true;
+                }
+        }
+
+        if(xMonstro3 < 26)
+        {
+            xMonstro3 += 10;
+            m3Mov = -1;
+        }
+
+        if(xMonstro3 > 420 + 30)
+        {
+            xMonstro3 -= 10;
+            m3Mov = -1;
+        }
+
+        if(yMonstro3 < 27)
+        {
+            yMonstro3 += 10;
+            m3Mov = -1;
+        }
+
+        if(yMonstro3 > 386 + 32)
+        {
+            yMonstro3 -= 10;
+            m3Mov = -1;
+        }
+    }
+}
+
 function loop()
 {
     testeColisao();
     novoMonstro2();
+    novoMonstro3();
     AtualizaTela();
 }
 
@@ -183,11 +261,11 @@ document.onkeydown=function MovimentoDoJogador(event){
                 if(!m2Mov)
                     xMonstro2 += 3; 
                 break;
-            case 83: 
+            case 65: 
                 if(m2Mov)
                     xMonstro2 -= 3; 
                 break;
-            case 65: yMonstro2 += 10; break;
+            case 83: yMonstro2 += 10; break;
             case 87: yMonstro2 -= 10; break;
         }
         }
@@ -253,7 +331,7 @@ function pontuacao()
 
 function novoMonstro2()
 {
-    if(point >= 300 && !m2 && xHeroi != 240)
+    if(point >= 600 && !m2 && xHeroi != 240)
     {
         m2 = true;
         xMonstro2 = 240;
@@ -264,5 +342,15 @@ function novoMonstro2()
 
         if(xHeroi < 240)
             m2Mov = true;
+    }
+}
+
+function novoMonstro3()
+{
+    if(point >= 300 && !m3 && xHeroi != 240)
+    {
+        m3 = true;
+        xMonstro3 = 240;
+        yMonstro3 = yHeroi;
     }
 }
