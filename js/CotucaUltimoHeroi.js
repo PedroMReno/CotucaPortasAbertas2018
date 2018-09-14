@@ -16,6 +16,7 @@ var yMonstro3 = 300;
 var m3Mov = -1;
 var m3 = false;
 var m3UltimoMov = false;
+var vezesPlayer = 5;
 
 var xHeroi = 240;
 var yHeroi = 200;
@@ -142,33 +143,42 @@ function MovimentoDoMonstro3(){
             case 2: xMonstro3 -= 10; break;
             case 3: yMonstro3 -= 10; break;
             case 4:
-                if(m3UltimoMov)
+                if(vezesPlayer > 0)
                 {
-                    if(xMonstro3 > xHeroi)
-                        xMonstro3 -= 10;
-                    if(xMonstro3 < xHeroi)
-                        xMonstro3 += 10;
+                    if(m3UltimoMov)
+                    {
+                        if(xMonstro3 > xHeroi)
+                            xMonstro3 -= 10;
+                        if(xMonstro3 < xHeroi)
+                            xMonstro3 += 10;
 
-                    if(yMonstro3 > yHeroi)
-                        yMonstro3 -= 10;
-                    if(yMonstro3 < yHeroi)
-                        yMonstro3 += 10;
+                        if(yMonstro3 > yHeroi)
+                            yMonstro3 -= 10;
+                        if(yMonstro3 < yHeroi)
+                            yMonstro3 += 10;
 
-                    m3UltimoMov = false;
+                        m3UltimoMov = false;
+                    }
+                    else
+                    {
+                        if(yMonstro3 > yHeroi)
+                            yMonstro3 -= 10;
+                        if(yMonstro3 < yHeroi)
+                            yMonstro3 += 10;
+
+                        if(xMonstro3 > xHeroi)
+                            xMonstro3 -= 10;
+                        if(xMonstro3 < xHeroi)
+                            xMonstro3 += 10;
+
+                        m3UltimoMov = true;
+                    }
+                    vezesPlayer--;
                 }
                 else
                 {
-                    if(yMonstro3 > yHeroi)
-                        yMonstro3 -= 10;
-                    if(yMonstro3 < yHeroi)
-                        yMonstro3 += 10;
-
-                    if(xMonstro3 > xHeroi)
-                        xMonstro3 -= 10;
-                    if(xMonstro3 < xHeroi)
-                        xMonstro3 += 10;
-
-                    m3UltimoMov = true;
+                    vezesPlayer = 5;
+                    m3Mov = -1;
                 }
         }
 
@@ -351,6 +361,6 @@ function novoMonstro3()
     {
         m3 = true;
         xMonstro3 = 240;
-        yMonstro3 = yHeroi;
+        yMonstro3 = 100;
     }
 }
