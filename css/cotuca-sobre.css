@@ -1,0 +1,41 @@
+.titulo{
+	font-family : Century Gothic;
+	font-size   : 30pt;
+	position    : relative;  
+}
+
+#campos{
+	height      : 400px; 
+}
+
+#texto{
+	font-family : Century Gothic;
+	font-size   : 16pt;  
+	text-align  : justify; 
+	position    : relative;
+	width       : 875px;  
+}
+
+#imagem{
+	height   : 350px; 
+	width    : 350px;
+	position : relative;  
+}
+
+#imagem:hover{
+	transition-timing-function : ease-in; 
+	transition                 : 0.5s; 
+	transform                  : scale(1.05); 
+}
+
+#colab{
+	height      : 445px;
+	width       : 320px;
+	margin-left : 85px;   
+}
+
+#colab:hover{
+	transition-timing-function : ease-in; 
+	transition                 : 0.5s; 
+	transform                  : scale(1.05); 
+}
