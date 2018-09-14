@@ -274,10 +274,49 @@ function MovimentoDoBoss(){
     }
 }
 
+function AtaqueDoChefe()
+{
+    if(point > 1100 && !m1)
+    {
+        m1 = true;
+        xMonstro = xBoss;
+        yMonstro = yBoss;
+        //imgMonstro.src="img/jogos/cotuca-ultimoHeroi/simone.png";
+
+    }
+
+    if(point > 1150 && !m3)
+    {
+        m3 = true;
+        xMonstro3 = xBoss;
+        yMonstro3 = yBoss;
+        m3Mov = -1;
+        m3UltimoMov = false;
+        vezesPlayer = 5;
+        //imgMonstro3.src="img/jogos/cotuca-ultimoHeroi/simone.png";
+    }
+
+    if(point > 1250 && !m2)
+    {
+        m2 = true;
+        xMonstro2 = 240;
+        yMonstro2 = yHeroi;
+
+        if(xHeroi > 240)
+            m2Mov = false;
+
+        if(xHeroi < 240)
+            m2Mov = true;
+
+        //imgMonstro2.src="img/jogos/cotuca-ultimoHeroi/simone.png";
+    }
+}
+
 function loop()
 {
     testeColisao();
     novoMonstro();
+    AtaqueDoChefe();
     AtualizaTela();
 }
 
