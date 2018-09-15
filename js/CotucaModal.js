@@ -1,24 +1,24 @@
 
-    function iniciaModal(modalID) {
-      if(localStorage.fechaModal !== modalID) {
+   var i = false;
+
+   function iniciaModal(modalID) {
         const modal = document.getElementById(modalID);
         if(modal) {
           modal.classList.add('mostrar');
           modal.addEventListener('click', (e) => {
-            if(e.target.className == 'fechar') {
+            if(e.target.id == modalID || e.target.className == 'fechar') {
               modal.classList.remove('mostrar');
-              localStorage.fechaModal = modalID;
             }
           });
         }
       }
-    }
 
-    const btn = document.getElementById('btn');
-    btn.addEventListener('click', () => iniciaModal('modal-promocao'));
+    // const btn = document.getElementById('btn');
+    // btn.addEventListener('click', () => iniciaModal('modal-promocao'));
 
     document.addEventListener('scroll', () => {
-      if(window.pageYOffset > 0) {
+      if(window.pageYOffset > 1 && i == false) {
         iniciaModal('modal-promocao')
+        i = true;
       }
     })
