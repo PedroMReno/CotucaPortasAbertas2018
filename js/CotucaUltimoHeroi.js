@@ -302,7 +302,7 @@ function AtaqueDoChefe()
 
     }
 
-    if(sCafe < 60 && !m3)
+    if(sCafe < 70 && !m3)
     {
         m3 = true;
         xMonstro3 = xBoss;
