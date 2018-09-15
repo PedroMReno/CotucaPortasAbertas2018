@@ -26,24 +26,33 @@ var bossMov = -1;
 var xIrBoss = -1;
 var yIrBoss = -1;
 var bossUltimoMov = false;
+var sCafe = 100;
 
 var xHeroi = 240;
 var yHeroi = 200;
+
+var xCafe = 5000;
+var yCafe = 300;
+var cafeExiste = false;
 
 var timerGeral = null;
 var timerMonstro = null;
 var timerMonstro3 = null;
 var timerBoss = null;
+var timerCafe = null;
 
 var jogando = false;
 var mover = true;
 var gameOver = false;
 
-var point = 990;            
+var point = 0;            
 // Declação dos objetos para representar
   // as imagens
 var imgFundo = new Image();
 imgFundo.src="img/jogos/cotuca-ultimoHeroi/fundo.png";
+
+var imgCafe = new Image();
+imgCafe.src="img/jogos/cotuca-ultimoHeroi/cafezinho.png";
 
 var imgHeroi = new Image();
 imgHeroi.src="img/jogos/cotuca-ultimoHeroi/heroi.png";
@@ -61,9 +70,11 @@ var imgBoss = new Image();
 imgBoss.src="img/jogos/cotuca-ultimoHeroi/simone.png";
 
 // FUNÇÕES ----------------------
-function AtualizaTela(){
+function AtualizaTela()
+{
     objContexto.drawImage(imgFundo,0,0);
     
+    objContexto.drawImage(imgCafe,xCafe,yCafe);
     objContexto.drawImage(imgHeroi,xHeroi,yHeroi);
     objContexto.drawImage(imgMonstro, xMonstro, yMonstro);
     objContexto.drawImage(imgMonstro2, xMonstro2, yMonstro2);
@@ -71,22 +82,26 @@ function AtualizaTela(){
     objContexto.drawImage(imgBoss, xBoss, yBoss);
 }
 
-function Iniciar(){
+function Iniciar()
+{
     objCanvas = document.getElementById("meuCanvas");
     objContexto = objCanvas.getContext("2d");
     timerGeral = setInterval(function(){loop()},1);
     timerMonstro = setInterval(function(){MovimentoDoMonstro()},100);
     timerMonstro3 = setInterval(function(){MovimentoDoMonstro3()},100);
     timerBoss = setInterval(function(){MovimentoDoBoss()},100);
+    timerCafe = setInterval(function(){novoCafe()},5000);
 
     MovimentoDoMonstro();
     MovimentoDoMonstro3();
     MovimentoDoBoss();
+    novoCafe();
     AtualizaTela();
     loop();
 }
 
-function MovimentoDoMonstro(){
+function MovimentoDoMonstro()
+{
     if(jogando)
     {
         if(m1)
@@ -146,14 +161,15 @@ function MovimentoDoMonstro(){
     }
 }
 
-function MovimentoDoMonstro3(){
+function MovimentoDoMonstro3()
+{
     if(jogando && m3)
     {
         var andou = true;
         var mudar =  Math.floor(Math.random() * 10);
 
         if(m3Mov < 0 || mudar > 7)
-            m3Mov = Math.floor(Math.random() * 6);
+            m3Mov = Math.floor(Math.random() * 7);
 
         switch(m3Mov){
             case 0: xMonstro3 += 10; break;
@@ -195,7 +211,7 @@ function MovimentoDoMonstro3(){
                 }
                 else
                 {
-                    vezesPlayer = 5;
+                    vezesPlayer = 3;
                     m3Mov = -1;
                 }
         }
@@ -226,7 +242,8 @@ function MovimentoDoMonstro3(){
     }
 }
 
-function MovimentoDoBoss(){
+function MovimentoDoBoss()
+{
     if(jogando && boss)
     {
         var andou = true;
@@ -281,11 +298,11 @@ function AtaqueDoChefe()
         m1 = true;
         xMonstro = xBoss;
         yMonstro = yBoss;
-        //imgMonstro.src="img/jogos/cotuca-ultimoHeroi/simone.png";
+        imgMonstro.src="img/jogos/cotuca-ultimoHeroi/elmo.png";
 
     }
 
-    if(point > 1150 && !m3)
+    if(sCafe < 60 && !m3)
     {
         m3 = true;
         xMonstro3 = xBoss;
@@ -293,10 +310,10 @@ function AtaqueDoChefe()
         m3Mov = -1;
         m3UltimoMov = false;
         vezesPlayer = 5;
-        //imgMonstro3.src="img/jogos/cotuca-ultimoHeroi/simone.png";
+        imgMonstro3.src="img/jogos/cotuca-ultimoHeroi/elmo3.png";
     }
 
-    if(point > 1250 && !m2)
+    if(sCafe < 20 && !m2 && (xHeroi < 210 || xHeroi > 270))
     {
         m2 = true;
         xMonstro2 = 240;
@@ -308,7 +325,15 @@ function AtaqueDoChefe()
         if(xHeroi < 240)
             m2Mov = true;
 
-        //imgMonstro2.src="img/jogos/cotuca-ultimoHeroi/simone.png";
+        imgMonstro2.src="img/jogos/cotuca-ultimoHeroi/elmo2.png";
+    }
+
+    if(sCafe <= 0)
+    {
+        sCafe = 10000000;
+        AtualizaTela();
+        alert("Você Venceu!");
+        location.reload();
     }
 }
 
@@ -401,7 +426,7 @@ function testeColisao()
         if(yDif < 0)
             yDif = yDif * - 1;
 
-        if(xDif < 33 && yDif < 33 && !gameOver)
+        if(xDif < 30 && yDif < 30 && !gameOver)
             gameOver = true;
 
         //Monstro2
@@ -413,7 +438,7 @@ function testeColisao()
         if(yDif < 0)
             yDif = yDif * - 1;
 
-        if(xDif < 31 && yDif < 31 && !gameOver)
+        if(xDif < 32 && yDif < 32 && !gameOver)
             gameOver = true;
 
         //Monstro3
@@ -425,7 +450,7 @@ function testeColisao()
         if(yDif < 0)
             yDif = yDif * - 1;
 
-        if(xDif < 31 && yDif < 31 && !gameOver)
+        if(xDif < 30 && yDif < 30 && !gameOver)
             gameOver = true;
 
         //Boss
@@ -437,8 +462,25 @@ function testeColisao()
         if(yDif < 0)
             yDif = yDif * - 1;
 
-        if(xDif < 31 && yDif < 31 && !gameOver)
+        if(xDif < 32 && yDif < 32 && !gameOver)
             gameOver = true;
+
+        //Cafe
+        xDif = xHeroi - xCafe;
+        if(xDif < 0)
+            xDif = xDif * - 1;
+
+        yDif = yHeroi - yCafe;
+        if(yDif < 0)
+            yDif = yDif * - 1;
+
+        if(xDif < 32 && yDif < 32 && cafeExiste)
+        {
+            cafeExiste = false;
+            sCafe -= 10;
+            xCafe = 5000;
+            yCafe = 300;
+        }
 
         if(gameOver)
         {
@@ -452,12 +494,16 @@ function testeColisao()
 function pontuacao()
 {
     point++;
-    document.getElementById("pt").innerHTML = "Pontuação: " + parseInt(point / 10);
+    if(!boss)
+        document.getElementById("pt").innerHTML = "Pontuação: " + parseInt(point / 10);
+    else
+        if(sCafe < 101)
+            document.getElementById("pt").innerHTML = "Necessidade de café da Simone: " + sCafe + "%";
 }
 
 function novoMonstro()
 {
-    if(point >= 600 && point < 1000 && !m2 && xHeroi != 240)
+    if(point >= 600 && point < 1000 && !m2 && (xHeroi < 210 || xHeroi > 270))
     {
         m2 = true;
         xMonstro2 = 240;
@@ -470,7 +516,7 @@ function novoMonstro()
             m2Mov = true;
     }
 
-    if(point >= 300 && point < 1000 && !m3 && xHeroi != 240)
+    if(point >= 300 && point < 1000 && !m3)
     {
         m3 = true;
         xMonstro3 = 240;
@@ -506,5 +552,15 @@ function novoMonstro()
             yIrBoss = yBoss;
             xIrBoss = xBoss;
         }
+    }
+}
+
+function novoCafe()
+{
+    if(boss && m1 && !cafeExiste)
+    {
+        xCafe = xMonstro;
+        yCafe = yMonstro;
+        cafeExiste = true;
     }
 }
