@@ -39,3 +39,15 @@
 	transition                 : 0.5s; 
 	transform                  : scale(1.05); 
 }
+
+#i{
+	text-decoration  : none;
+	color            : #2bcaf2;
+}
+
+#i:hover{
+	transition-timing-function : ease-in;
+	transition                 : 0.5s;  
+	text-decoration            : underline; 
+	background-color           : rgba(43, 202, 242, 0.215); 
+}
