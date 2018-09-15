@@ -485,7 +485,7 @@ function testeColisao()
         if(gameOver)
         {
             AtualizaTela();
-            var imagem = document.getElementById("game-over");
+            var imagem = document.getElementById("tela");
             imagem.style.visibility = "visible";
             location.reload();
         }
