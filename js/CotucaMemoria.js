@@ -107,7 +107,7 @@ function iniciar()
     desabilitar(true);
 
     var v1 = document.getElementById("bordaJogo");
-    v1.style.backgroundImage = "url('./img/jogos/geral/inicioGenerico.png')";
+    v1.style.backgroundImage = "url('./img/jogos/memoria/inicio.png')";
 }
 
 function cliqueIniciar()
@@ -125,10 +125,6 @@ function perdeu()
 {
     setTimeout(function()
     {
-        desabilitar(true);
-
-        var v1 = document.getElementById("bordaJogo");
-        v1.style.backgroundImage = "url('./img/jogos/geral/game-over.png')";
         v1 = document.getElementById("btnReiniciar");
         v1.style.visibility = "visible";
         v1.disabled = false;

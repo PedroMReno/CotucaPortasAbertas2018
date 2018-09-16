@@ -1,12 +1,18 @@
-#bordaJogo img
-{
-    height: 70px;
-    width: 70px;
-    background-size: contain;
+#bordaJogo{
+    background-image : linear-gradient(to bottom right, #05cbba, #a77fcd); 
+}
 
-    position: relative;
-    left: 150px;
-    top: 25px;
+#bordaJogo img
+{ 
+    margin          : 5px; 
+    height          : 100px;
+    width           : 100px;
+    background-size : contain;
+    position        : relative;
+    left            : 70px;
+    top             : 65px;
+    border          : 1px solid grey;
+    border-radius   : 10px; 
 }
 
 #bordaJogo p
@@ -16,7 +22,24 @@
 
 #pontos
 {
-	position: absolute;
-	bottom: 40px;
-	left: 20px;
+	position    : absolute;
+	top         : 20px;
+	left        : 225px;
+    font-family : Century Gothic; 
+    font-size   : 16pt;
+    color       : #f2ebd3; 
+}
+
+#btnReiniciar{
+    background-image : none; 
+    background-color : #2e3d49;
+    color            : #f2ebd3;
+    border-radius    : 0px;  
+    border           : 2px solid #f2ebd3;  
+}
+
+#btnReiniciar:hover{
+    transition-timing-function : ease-in; 
+    transition                 : 0.5s; 
+    background-color           : #02ccba; 
 }
