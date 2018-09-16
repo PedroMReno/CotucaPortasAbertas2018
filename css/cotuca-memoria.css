@@ -5,13 +5,13 @@
 #bordaJogo img
 { 
     margin          : 5px; 
-    height          : 100px;
-    width           : 100px;
+    height          : 90px;
+    width           : 90px;
     background-size : contain;
     position        : relative;
-    left            : 70px;
+    left            : 75px;
     top             : 65px;
-    border          : 1px solid grey;
+    border          : 5px solid white;
     border-radius   : 10px; 
 }
 

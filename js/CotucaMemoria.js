@@ -56,7 +56,7 @@ function TrocaImagem(img)
                 document.getElementById("idImagem").innerHTML = "VAZIO";
 
                 atualizarLabel();
-            }, 300);
+            }, 1000);
 
             if(acertosTotais >= 7)
                 perdeu();
