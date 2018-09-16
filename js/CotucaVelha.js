@@ -50,11 +50,13 @@ function cliqueBtn(id)
 		if(turno)
 		{
 			v1.innerHTML = "X";
+			v1.style.color = "#545454";
 			turno = false;
 		}
 		else
 		{
 			v1.innerHTML = "O";
+			v1.style.color = "#f2ebd3";
 			turno = true;
 		}
 
@@ -116,7 +118,7 @@ function iniciar()
 	desabilitar(true);
 
 	var v1 = document.getElementById("bordaJogo");
-	v1.style.backgroundImage = "url('./img/jogos/geral/inicioGenerico.png')";
+	v1.style.backgroundImage = "url('./img/jogos/cotuca-velha/1.png')";
 }
 
 function cliqueIniciar()
