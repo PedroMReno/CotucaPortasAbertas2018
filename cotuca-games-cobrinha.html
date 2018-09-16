@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Cotuca Games | </title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href=".\css\estilo-geral.css">
+        <link rel="stylesheet" type="text/css" href=".\css\estilo-jogos-geral.css">
+        <link rel="stylesheet" type="text/css" href=".\css\estilo-cobrinha.css">
+        <link rel="icon" type="image/gif" href=".\img\geral\logo-site.ico" sizes="16x16">
+    </head>
+    
+    <body>
+        <nav id="menu">
+            <ul>
+                <li><a class="logo" href=".\cotuca-games-home.html"><img class="logo" src=".\img\geral\logo-site.png"></a></li>
+            </ul>
+            <ul class="menu">
+                <li><a href="cotuca-games-home.html"><img class="home" src=".\img\geral\home.png"></a></li>
+                <li><a id="abas" href=".\cotuca-games-sobre.html">SOBRE</a></li>   
+                <li><a id="abas" href=".\cotuca-games-jogos.html">JOGOS</a></li>
+            </ul>
+        </nav>
+
+        <tituloJogo class="tituloJogo">SNAKE</tituloJogo>
+
+        <hr class="separacao" style="top: 35px;">
+
+        <!-- <div id="bordaJogo"> -->
+
+        <canvas id="canvasJogo" width="400" height="400" style="border:1px solid grey;position : relative;top:80px;left:400px; z-index: -1"></canvas>
+            
+        </div>  
+
+<!--         <img id="imagem" src=".\img\jogos\cotuca-snake\fundo.png" style="height: 400px; position: relative; left: -5px; width: 400px;top: 79px; z-index: 1"> -->
+
+    <img id="tela"  style="height: 400px; position: relative; left: -5px; width: 400px;top: 79px; z-index: 1, visibility: hidden;">
+
+		<hr class="separacao" style="top: 130px;">
+
+		<tituloDescricao class="tituloDescricao">DESCRIÇÃO</tituloDescricao>
+
+		<div id="descricao">
+            Jogue o famoso game "Serpente" que fez sucesso na década de 80! Seu objetivo é pegar o máximo de maçãs que conseguir, sempre tendo cautela para não esbarrar em uma parede ou em sua prórpia cauda! Hora de rastejar!
+        </div>
+
+        <label id="pt">Pontuacao: 0</label>
+        <!-- <label id="r">Pressione W,A,S OU D para reiniciar!</label> -->
+
+		<footer class="footer" style="top: 500px;">
+        	&copy;2018 COTUCA GAMES<br>
+        	Criado por Gustavo Henrique Béra, Pedro Henrique Marques Renó e Vitor Ramos.
+    	</footer>  
+
+    </body>
+
+    <script type="text/javascript" src=".\js\CotucaCobrinha.js"></script>
+
+</html>

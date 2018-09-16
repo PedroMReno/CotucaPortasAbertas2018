@@ -1,0 +1,26 @@
+.canvas
+{
+	position : relative;
+	top      : 80px; 
+	left     : 400px;
+	border   : 1px solid grey;
+	height   : 500px;
+	width    : 500px; 
+	z-index  : -1;
+}
+
+#pt{
+	position    : relative;
+	top         : -5px; 
+	left 		: 550px;
+	font-family : Century Gothic; 
+}
+
+#r{
+	position    : relative;
+	top         : -60px; 
+	left 		: 350px;
+	font-family : Century Gothic; 
+	color       : #ffc000;
+	font-weight : bold; 
+}
