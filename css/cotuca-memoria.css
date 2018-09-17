@@ -23,6 +23,7 @@
 {
 	position    : absolute;
 	top         : 20px;
+    left        : 225px; 
     font-family : Century Gothic; 
     font-size   : 16pt;
     color       : #f2ebd3; 
