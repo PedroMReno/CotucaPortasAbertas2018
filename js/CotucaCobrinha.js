@@ -6,6 +6,12 @@
 
 	var iniciar = new Image();
 	iniciar.src = "./img/jogos/cotuca-snake/1.png";
+
+	var body = new Image();
+	iniciar.src = "./img/jogos/cotuca-snake/cobraBODY.png";
+
+	var body = document.getElementById("body");
+
 	
 	
 	window.onload = function(){
@@ -55,7 +61,7 @@
 		ctx.fillStyle = "white";
 		ctx.fillRect( 0, 0, stage.width, stage.height );
 
-		ctx.fillStyle = "#FF6347"
+		ctx.fillStyle = "#FF6347";
 		ctx.fillRect(ax * tp, ay * tp, tp - 2, tp - 2);
 
 		ctx.fillStyle = "#ADFF2F"
