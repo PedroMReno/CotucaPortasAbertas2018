@@ -1,7 +1,6 @@
 	#bordaJogo{
 		position : relative;
-		top      : 80px; 
-		left     : 365px;
+		top      : 80px;
 		border   : 1px solid grey;
 		height   : 400px;
 		width    : 600px;  

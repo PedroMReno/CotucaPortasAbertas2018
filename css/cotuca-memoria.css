@@ -9,7 +9,6 @@
     width           : 90px;
     background-size : contain;
     position        : relative;
-    left            : 75px;
     top             : 65px;
     border          : 5px solid white;
     border-radius   : 10px; 
@@ -24,7 +23,6 @@
 {
 	position    : absolute;
 	top         : 20px;
-	left        : 225px;
     font-family : Century Gothic; 
     font-size   : 16pt;
     color       : #f2ebd3; 

@@ -29,9 +29,10 @@
 }
 
 #colab{
-	height      : 445px;
-	width       : 320px;
-	margin-left : 85px;   
+	height       : 445px;
+	width        : 320px;
+	margin-right : 45px;
+	margin-left  : 45px;    
 }
 
 #colab:hover{
