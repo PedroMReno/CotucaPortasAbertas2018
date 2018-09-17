@@ -1,6 +1,7 @@
 var posicao = [1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8];
 var pontuacao = 0;
 var acertosTotais = 0;
+var pausar = false;
             
 posicao.sort(function() {return (Math.round(Math.random()) -0.5);})
 
@@ -8,7 +9,7 @@ function TrocaImagem(img)
 {
     if(img.name == "")
     {
-        bloquear(true);
+        bloquear(true); 
         //Verifica se é a primeira imagem clicada
         if(document.getElementById("nomeImagem").innerHTML == "VAZIO")
         {
@@ -56,12 +57,11 @@ function TrocaImagem(img)
                 document.getElementById("idImagem").innerHTML = "VAZIO";
 
                 atualizarLabel();
-            }, 1000);
+            }, 200);
 
             if(acertosTotais >= 7)
                 perdeu();
         }
-
         bloquear(false);
     }
 }
