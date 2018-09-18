@@ -25,17 +25,22 @@
 
         <hr class="separacao" style="top: 35px;">
 
-        <!-- <div id="bordaJogo"> -->
-
-        <canvas id="canvasJogo" width="400" height="400" style="border:1px solid grey;position : relative;top:80px;left:400px; z-index: -1"></canvas>
-            
-        </div>  
-
-<!--         <img id="imagem" src=".\img\jogos\cotuca-snake\fundo.png" style="height: 400px; position: relative; left: -5px; width: 400px;top: 79px; z-index: 1"> -->
-
-    <img id="tela" style="height: 400px; position: relative; left: -5px; width: 400px;top: 79px; z-index: 1, visibility: hidden;">
-
-    <!-- <img id="body" src=".\img\jogos\cotuca-snake\maca.png" style="position: relative; z-index: 1; left: -20%;"> -->
+        <center>
+        	<div style="width: 400px; height: 400px">
+        		<canvas id="canvasJogo" width="400" height="400" 
+        			style="border:1px solid #000; position: relative; top: 80px">
+        			Atualize seu browser para ver o CANVAS		
+        		</canvas>
+				<img id="tela" src="./img/jogos/cotuca-ultimoHeroi/2.png"> <!-- ID TELA DEFINE TELA INICIAL E FINAL -->
+	
+				<button id="btnIniciar" onclick="cliqueIniciar();" style="left: 580px; top: 675px; visibility: hidden">Iniciar</button>
+	
+            	<button id="btnReiniciar" onclick="location.reload();" disabled="true" style="left: 580px; top: 675px;">Reiniciar</button>
+        	</div>
+            <br>
+            <label id="pt">Pontuacao: 0</label>
+            <br>
+        </center>
 
 		<hr class="separacao" style="top: 130px;">
 
@@ -44,9 +49,6 @@
 		<div id="descricao">
             Jogue o famoso game "Serpente" que fez sucesso na década de 80! Seu objetivo é pegar o máximo de maçãs que conseguir, sempre tendo cautela para não esbarrar em uma parede ou em sua prórpia cauda! Hora de rastejar!
         </div>
-
-        <label id="pt">Pontuacao: 0</label>
-        <!-- <label id="r">Pressione W,A,S OU D para reiniciar!</label> -->
 
 		<footer class="footer" style="top: 500px;">
         	&copy;2018 COTUCA GAMES<br>
