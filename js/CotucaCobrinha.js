@@ -28,6 +28,8 @@ var trail = [];
 var tail = 5;
 var point = 0;	
 
+var bateu = false;
+
 function jogo()
 {
 	px += vx;
@@ -52,14 +54,15 @@ function jogo()
 	for (var i = 0; i < trail.length; i++)
 	{
 		ctx.fillRect(trail[i].x * tp, trail[i].y * tp, tp - 2, tp - 2);
-		if ( trail[i].x == px && trail[i].y == py)
+		if ( trail[i].x == px && trail[i].y == py && pCorpo == false)
 		{
 			vx = vy = 0;
 			tail = 5;
 			px = 10;
 			py = 15;
 			AtualizarTela();
-			// ctx.drawImage(gameOver,0,0);	
+			// ctx.drawImage(gameOver,0,0);
+				
 		}
 	}
 	trail.push( { x:px, y:py } ); //cria um objeto e diz que o elemento xy será a 
@@ -97,6 +100,7 @@ function pressionaTecla( evt )
 			break;
 	}
 }
+
 function pontuacao()
 {
 	point++;
