@@ -10,7 +10,7 @@
 
     <script src=".\js\CotucaUltimoHeroi.js"></script>
 
-    <body onload="Iniciar(); pause();">
+    <body onload="Iniciar();">
         <nav id="menu">
             <ul>
                 <li><a class="logo" href="cotuca-games-home.html"><img class="logo" src=".\img\geral\logo-site.png"></a></li>
@@ -31,18 +31,16 @@
                 	style="border:1px solid #000; position: relative; top: 80px">
                 	Atualize seu browser para ver o CANVAS
             	</canvas>
-				<img id="tela" src="./img/jogos/cotuca-ultimoHeroi/2.png"> <!-- ID TELA DEFINE TELA INICIAL E FINAL -->
+				<img id="tela" style="visibility: hidden; width: 512px; height: 480px; z-index: -1"> <!-- ID TELA DEFINE TELA INICIAL E FINAL -->
 
-				<button id="btnIniciar" onclick="cliqueIniciar();" style="left: 580px; top: 675px; visibility: hidden">Iniciar</button>
+				<button id="btnIniciar" onclick="pause(); this.disabled = true; this.style.visibility ='hidden'" style="left: 700px; top: 675px;">Iniciar</button>
 
-            	<button id="btnReiniciar" onclick="location.reload();" disabled="true" style="left: 580px; top: 675px;">Reiniciar</button>
+            	<button id="btnReiniciar" onclick="location.reload();" disabled="true" style="left: 700px; top: 675px;">Reiniciar</button>
         	</div>
             <br>
-            <label id="pt">Pontuacao: 0</label>
+            <label id="pt">Pontuação: 0</label>
             <br>
         </center>
-        
-        <input type="button" onclick="pause();" value="||" disabled="true" style="visibility: hidden;">
 
         <hr class="separacao" style="top: 130px;">
 
