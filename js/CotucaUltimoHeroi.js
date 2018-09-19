@@ -45,7 +45,7 @@ var jogando = false;
 var mover = true;
 var gameOver = false;
 
-var point = 0;            
+var point = 980;           
 // Declação dos objetos para representar
   // as imagens
 var imgFundo = new Image();
@@ -69,6 +69,8 @@ imgMonstro3.src="img/jogos/cotuca-ultimoHeroi/monstro3.png";
 var imgBoss = new Image();
 imgBoss.src="img/jogos/cotuca-ultimoHeroi/simone.png";
 
+var imgIF = new Image();
+imgIF.src="./img/jogos/cotuca-ultimoHeroi/1.png"
 // FUNÇÕES ----------------------
 function AtualizaTela()
 {
@@ -80,6 +82,16 @@ function AtualizaTela()
     objContexto.drawImage(imgMonstro2, xMonstro2, yMonstro2);
     objContexto.drawImage(imgMonstro3, xMonstro3, yMonstro3);
     objContexto.drawImage(imgBoss, xBoss, yBoss);
+
+    if(!jogando)
+    {
+        objContexto.drawImage(imgIF,0,0);
+
+        if(sCafe <= 0)
+        {
+            
+        }
+    }
 }
 
 function Iniciar()
@@ -330,10 +342,14 @@ function AtaqueDoChefe()
 
     if(sCafe <= 0)
     {
+        pause();
         sCafe = 10000000;
+        imgIF.src="./img/jogos/cotuca-ultimoHeroi/2.png"
         AtualizaTela();
-        alert("Você Venceu!");
-        location.reload();
+        document.getElementById("pt").innerHTML = "Você Venceu!";
+        var btn = document.getElementById('btnReiniciar');
+            btn.style.visibility = "visible";
+            btn.disabled = false;
     }
 }
 
@@ -484,10 +500,12 @@ function testeColisao()
 
         if(gameOver)
         {
+            pause();
+            imgIF.src="./img/jogos/cotuca-ultimoHeroi/2.png";
             AtualizaTela();
-            var imagem = document.getElementById("tela");
-            imagem.style.visibility = "visible";
-            location.reload();
+            var btn = document.getElementById('btnReiniciar');
+            btn.style.visibility = "visible";
+            btn.disabled = false;
         }
     }
 }
