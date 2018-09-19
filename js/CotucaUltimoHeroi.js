@@ -45,7 +45,7 @@ var jogando = false;
 var mover = true;
 var gameOver = false;
 
-var point = 980;           
+var point = 0;           
 // Declação dos objetos para representar
   // as imagens
 var imgFundo = new Image();
@@ -70,7 +70,7 @@ var imgBoss = new Image();
 imgBoss.src="img/jogos/cotuca-ultimoHeroi/simone.png";
 
 var imgIF = new Image();
-imgIF.src="./img/jogos/cotuca-ultimoHeroi/1.png"
+imgIF.src="./img/jogos/cotuca-ultimoHeroi/1.png";
 // FUNÇÕES ----------------------
 function AtualizaTela()
 {
@@ -344,7 +344,7 @@ function AtaqueDoChefe()
     {
         pause();
         sCafe = 10000000;
-        imgIF.src="./img/jogos/cotuca-ultimoHeroi/2.png"
+        imgIF.src="./img/jogos/cotuca-ultimoHeroi/3.png"
         AtualizaTela();
         document.getElementById("pt").innerHTML = "Você Venceu!";
         var btn = document.getElementById('btnReiniciar');
