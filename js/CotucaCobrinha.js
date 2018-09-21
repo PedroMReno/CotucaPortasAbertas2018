@@ -27,8 +27,7 @@ var trail = [];
 
 var tail = 5;
 var point = 0;	
-
-var bateu = false;
+var pointAnt = 0;
 
 function jogo()
 {
@@ -54,7 +53,7 @@ function jogo()
 	for (var i = 0; i < trail.length; i++)
 	{
 		ctx.fillRect(trail[i].x * tp, trail[i].y * tp, tp - 2, tp - 2);
-		if ( trail[i].x == px && trail[i].y == py && pCorpo == false)
+		if ( trail[i].x == px && trail[i].y == py)
 		{
 			vx = vy = 0;
 			tail = 5;
@@ -62,15 +61,15 @@ function jogo()
 			py = 15;
 			AtualizarTela();
 			// ctx.drawImage(gameOver,0,0);
-				
 		}
 	}
+
 	trail.push( { x:px, y:py } ); //cria um objeto e diz que o elemento xy será a 
 								  //posição atual da cabeça já que não bateu em nada
 								  //array.push() adiciona um item ao final do vetor;
 	while(trail.length > tail)
 		trail.shift(); // remove o primeiro elemento do vetor
-	if( ax == px && ay == py)
+	if( ax == px && ay == py )
 	{
 		tail++;
 		ax = Math.floor( Math.random() * qp );
@@ -78,6 +77,7 @@ function jogo()
 		pontuacao();
 	}
 }
+
 function pressionaTecla( evt )
 {
 	switch( evt.keyCode )
@@ -104,7 +104,8 @@ function pressionaTecla( evt )
 function pontuacao()
 {
 	point++;
-	document.getElementById("pt").innerHTML = "Pontuação: " + point;
+	pointAnt = point;
+	document.getElementById("pt").innerHTML = "Pontuação Atual: " + point;
 }
 // function Iniciar()
 // {
@@ -119,5 +120,11 @@ function AtualizarTela()
 	vx = vy = 0;
 	trail = [];
 	tail = 5;
-	document.getElementById("pt").innerHTML = "Pontuação: " + point;
+	document.getElementById("pt").innerHTML = "Pontuação Atual: " + point;
+	document.getElementById("pt2").innerHTML = "Pontuação anterior: " + pointAnt;
+}
+
+function Perdeu()
+{
+	alert("GAME OVER! PONTUAÇÃO FINAL: " + point);
 }

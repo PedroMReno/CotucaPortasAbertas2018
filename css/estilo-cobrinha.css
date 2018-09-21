@@ -1,8 +1,26 @@
 #pt{
 	position    : relative;
 	top         : 100px;
-	font-family : Century Gothic; 
+	font-family : Century Gothic;
+	left: -120px; 
 }
+
+#pt2{
+	position    : relative;
+	top         : 100px;
+	font-family : Century Gothic; 
+	left: -90px;
+}
+
+#controle
+{
+	position    : relative;
+	top         : -370px;
+	font-family : Century Gothic; 
+	left: 170px;
+}
+
+
 
 #tela{
 	position   : relative; 
