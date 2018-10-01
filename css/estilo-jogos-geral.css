@@ -49,6 +49,7 @@
 		position         : absolute; 
 		top              : 340px; 
 		left             : 215px;
+		outline          : none; 
 	}
 
 	#btnIniciar:hover, 

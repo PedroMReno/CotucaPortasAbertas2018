@@ -1,79 +1,113 @@
-	#Nivel{
-		position    : absolute;
-		top         :10px; 
-		left        : 195px; 
-		font-family : Century Gothic; 
-		font-size   : 18pt;
-	}
+@font-face{
+	font-family : 'Gameplay'; 
+	src         : url('../fonts/Gameplay.ttf');
+}
 
-	#btnEstudar{
-		width            : 200px; 
-		height           : 50px; 
-		position         : absolute; 
-		top              : 80px; 
-		left             : 200px;
-		border-radius    : 25px;
-		font-family      : Century Gothic;
-		font-size        : 18pt;
-		background-image : linear-gradient(black, #2f2f2f);
-		border-style     : none;
-		color            : white;   
-	}
+#Nivel{
+	position    : absolute;
+	top         : 0px; 
+	left        : 15px; 
+	font-family : 'Gameplay'; 
+	font-size   : 14pt;
+	color       : white; 
+	user-select : none; 
+}
 
-	#btnTrabalho{
-		border-radius    : 15px;
-		font-family      : Century Gothic;
-		font-size        : 10pt;
-		background-image : linear-gradient(#920303, #c93131);
-		border-style     : none;
-		color            : white;   
-		visibility       : hidden; 
-		width            : 80px; 
-		height           : 50px; 
-		position         : absolute;
-	}
+#btnEstudar{
+	width            : 50px; 
+	height           : 200px; 
+	position         : absolute; 
+	top              : 135px; 
+	left             : 280px;
+	font-family      : Century Gothic;
+	font-size        : 18pt;
+	border-style     : none;
+	color            : white;  
+	outline          : none;
+	transform        : rotate(20deg);
+	user-select      : none;    
+}
 
-	#myProgress{
-		border-radius    : 25px;
-		width            : 500px; 
-		position         : absolute; 
-		top              : 320px; 
-		left             : 50px; 
-		background-color : grey;   
-	}
+#btnEstudar:hover{
+	animation                 : shake 2s;
+    animation-iteration-count : infinite;
+    cursor                    : pointer;
+}
 
-	#barra{
-		border-radius    : 25px; 
-		background-image : linear-gradient(#36900a, #6de334);
-		height           : 50px; 
-		width            : 0%; 
-	}
+#btnTrabalho{
+	border-style     : none;
+	color            : white;   
+	visibility       : hidden; 
+	width            : 90px; 
+	height           : 120px; 
+	position         : absolute;  
+	outline          : none;
+	user-select      : none; 
+}
 
-	#Prova{
-		font-family : Century Gothic; 
-		position    : absolute; 
-		top         : 250px; 
-		left        : 50px;
-	}
+#btnTrabalho:hover{
+	transform  : scale(1.025);
+	cursor     : pointer;   
+}
 
-	#PDf{
-		font-family : Century Gothic; 
-		position    : absolute; 
-		top         : 270px; 
-		left        : 50px;
-	}
+#myProgress{
+	border-radius    : 25px;
+	width            : 500px; 
+	position         : absolute; 
+	top              : 65px; 
+	left             : 50px; 
+	background-color : grey;   
+}
 
-	#btnDp, #btnDp2, #btnDp3{
-		border-radius : 15px;
-		font-family   : Century Gothic;
-		border-style  : none;   
-		visibility    : hidden; 
-		width         : 40px; 
-		height        : 30px; 
-		position      : absolute;
-	}
+#barra{
+	border-radius    : 25px; 
+	background-image : linear-gradient(#36900a, #6de334);
+	height           : 25px; 
+	width            : 0%; 
+}
 
-	#btnEstudar:hover,
-	#btnTrabalho:hover{
-		transform : scale(1.05); 
-	}
+#Prova{
+	font-family : 'Gameplay';
+	font-size   : 8pt;
+	font-weight : bold; 
+	color       : white;  
+	position    : absolute; 
+	top         : 10px; 
+	right       : 15px;
+	user-select : none; 
+}
+
+#PDf{
+	font-family : 'Gameplay';
+	font-size   : 10pt;
+	font-weight : bold; 
+	color       : white;  
+	position    : absolute; 
+	top         : 25px; 
+	right       : 15px;
+	user-select : none; 
+}
+
+#btnDp, #btnDp2, #btnDp3{
+	border-style  : none;   
+	visibility    : hidden; 
+	width         : 60px; 
+	height        : 80px; 
+	position      : absolute;  
+	outline       : none;
+	user-select   : none; 
+}
+
+@keyframes shake {
+    0%   { transform: translate(1px, 1px) rotate(0deg); }
+    10%  { transform: translate(-1px, -2px) rotate(-1deg); }
+    20%  { transform: translate(-3px, 0px) rotate(1deg); }
+    30%  { transform: translate(3px, 2px) rotate(0deg); }
+    40%  { transform: translate(1px, -1px) rotate(1deg); }
+    50%  { transform: translate(-1px, 2px) rotate(-1deg); }
+    60%  { transform: translate(-3px, 1px) rotate(0deg); }
+    70%  { transform: translate(3px, 1px) rotate(-1deg); }
+    80%  { transform: translate(-1px, -1px) rotate(1deg); }
+    90%  { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}

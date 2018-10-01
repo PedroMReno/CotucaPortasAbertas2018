@@ -73,16 +73,16 @@ function aleatorizador()
 	df = df + 5 + nEstudo + dfBonus;
 
 	var m = Math.floor((Math.random() * 5) + 1);
-	var materia = "Próxima prova: ";
+	var materia = "Proxima prova: ";
 
 	switch(m)
 	{
 		case 1:
-			materia += "Técnica de Programação";
+			materia += "Tecnica de Programacao";
 			break;
 
 		case 2:
-			materia += "Desenvolvimento para Internet";
+			materia += "Desenvolvimento para WEB";
 			break;
 
 		case 3:
@@ -94,7 +94,7 @@ function aleatorizador()
 			break;
 
 		case 5:
-			materia += "Gestão Empresarial";
+			materia += "Gestao Empresarial";
 			break;
 	}
 
@@ -162,7 +162,7 @@ function atualizarTela()
 {
 	perderFoco();
 
-	document.getElementById("Nivel").innerHTML = "Nível de Estudo: " + nEstudo;
+	document.getElementById("Nivel").innerHTML = "Nivel de Estudo: " + nEstudo;
 }
 
 function fimTempo()
@@ -189,14 +189,14 @@ function desbloquear()
 	if(bloqueado == 0)
 	{
 		var btn1 = document.getElementById("btnEstudar");
-		btn1.disabled = false;
+		btn1.style.visibility = "visible";
 	}
 }
 
 function nTrabalho()
 {
 	var btn1 = document.getElementById("btnEstudar");
-		btn1.disabled = true;
+		btn1.style.visibility = "hidden";
 	bloqueado++;
 
 	trabCliques = 0;
@@ -240,7 +240,7 @@ function cliqueTrab()
 function nDP()
 {
 	var btn1 = document.getElementById("btnEstudar");
-		btn1.disabled = true;
+		btn1.style.visibility = "hidden";
 	bloqueado++;
 
 	dpCliques = 0;
@@ -367,7 +367,7 @@ function cliqueIniciar()
 	sumir(false);
 	desabilitar(false);
 	var v1 = document.getElementById("bordaJogo");
-	v1.style.backgroundImage = null;
+	v1.style.backgroundImage = "url('./img/jogos/cotuca-simulator/3.png')";
 	v1 = document.getElementById("btnIniciar");
 	v1.style.visibility = "hidden";
 	v1.disabled = true;
