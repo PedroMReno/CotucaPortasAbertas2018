@@ -2,6 +2,7 @@
 	position    : relative;
 	top         : 100px; 
 	font-family : Century Gothic; 
+	user-select : none; 
 }
 
 #tela{

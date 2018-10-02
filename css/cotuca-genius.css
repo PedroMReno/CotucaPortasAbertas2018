@@ -51,4 +51,5 @@
     font-family : Century Gothic;
     font-size   : 16pt; 
     color       : white; 
+    user-select : none;
 }

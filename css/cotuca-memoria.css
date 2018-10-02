@@ -26,7 +26,8 @@
     left        : 225px; 
     font-family : Century Gothic; 
     font-size   : 16pt;
-    color       : #f2ebd3; 
+    color       : #f2ebd3;
+    user-select : none; 
 }
 
 #btnReiniciar{
