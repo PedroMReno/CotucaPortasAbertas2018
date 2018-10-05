@@ -1,7 +1,8 @@
 #quadroJogos{
-	position : relative;
-	top      : 115px;
-	width    : 615px; 
+	position    : relative;
+	top         : 115px;
+	width       : 615px; 
+	user-select : none; 
 }
 
 #icone{

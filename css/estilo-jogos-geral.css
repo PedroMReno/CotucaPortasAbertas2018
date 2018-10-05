@@ -1,9 +1,10 @@
 	#bordaJogo{
-		position : relative;
-		top      : 80px;
-		border   : 1px solid grey;
-		height   : 400px;
-		width    : 600px;  
+		position    : relative;
+		top         : 80px;
+		border      : 1px solid grey;
+		height      : 400px;
+		width       : 600px; 
+		user-select : none;
 	}
 
 	.tituloJogo{
