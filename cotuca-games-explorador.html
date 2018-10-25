@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Cotuca Games | O Explorador</title>
+        <meta charset="utf-8">        
+        <link rel="stylesheet" type="text/css" href=".\css\estilo-geral.css">
+        <link rel="stylesheet" type="text/css" href=".\css\estilo-jogos-geral.css">
+        <link rel="stylesheet" type="text/css" href=".\css\cotuca-explorador.css">
+        <link rel="icon" type="image/gif" href=".\img\geral\logo-site.ico" sizes="16x16">    
+    </head>
+
+    <script src=".\js\CotucaExplorador.js"></script>
+
+    <body onload="Iniciar();">
+        <nav id="menu">
+            <ul>
+                <li><a class="logo" href="cotuca-games-home.html"><img class="logo" id="mLogo" src=".\img\geral\logo-site.png"></a></li>
+            </ul>
+            <ul class="menu">
+                <li><a href="cotuca-games-home.html"><img class="home" style="padding-bottom: 5px;" src=".\img\geral\home.png"></a></li>     <li><a id="aba2" href="cotuca-games-sobre.html">SOBRE</a></li>   
+                <li><a id="aba1" href="cotuca-games-jogos.html">JOGOS</a></li>
+            </ul>
+        </nav>
+
+        <tituloJogo class="tituloJogo" id="tJogo">O EXPLORADOR</tituloJogo>
+
+        <hr class="separacao" style="top: 35px;">        
+
+        <center>
+        	<div style="width: 512px; height: 480px">
+        		<canvas id="meuCanvas" width="512" height="480"
+                	style="border:1px solid #000; position: relative; top: 80px">
+                	Atualize seu browser para ver o CANVAS
+            	</canvas>
+				<img id="tela" style="visibility: hidden; width: 512px; height: 480px; z-index: -1"> <!-- ID TELA DEFINE TELA INICIAL E FINAL -->
+
+				<button id="btnIniciar" onclick="pause(); this.disabled = true; this.style.visibility ='hidden'" style="left: 700px; top: 675px; visibility: hidden" disabled="true";>Iniciar</button>
+
+            	<button id="btnReiniciar" onclick="location.reload();" disabled="true" style="left: 700px; top: 675px;">Reiniciar</button>
+        	</div>
+            <br>
+            <label id="pt">???</label>
+            <br>
+        </center>
+
+        <hr class="separacao" style="top: 130px;">
+
+        <tituloDescricao class="tituloDescricao">DESCRIÇÃO</tituloDescricao>
+
+        <div id="descricao">
+            Sou apenas uma DEMO :D
+        </div>
+
+        <footer class="footer" style="top: 500px;">
+            &copy;2018 COTUCA GAMES<br>
+            Criado por Gustavo Henrique Béra, Pedro M. Renó e Vitor Ramos.
+        </footer>
+
+    </body>
+</html>

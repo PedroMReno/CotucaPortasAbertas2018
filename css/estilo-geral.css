@@ -41,6 +41,16 @@
 	float            : right;
 }
 
+#menu .menu li #aba1{
+	border-top       : 2px solid #fe2020; 
+	float            : right;
+}
+
+#menu .menu li #aba2{
+	border-top       : 2px solid #fe2020; 
+	float            : right;
+}
+
 #menu .menu li a:hover{
 	transition-timing-function : ease-in;
 	transition                 : 0.5s;

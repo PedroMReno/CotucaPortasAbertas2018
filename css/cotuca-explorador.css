@@ -1,0 +1,14 @@
+#pt{
+	position    : relative;
+	top         : 100px; 
+	font-family : Century Gothic; 
+	user-select : none; 
+}
+
+#tela{
+	position   : relative; 
+	top        : -400px; 
+	z-index    : 1000;
+	width      : 512px;
+	visibility : hidden;  
+}
